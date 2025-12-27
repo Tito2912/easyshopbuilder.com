@@ -1,0 +1,44 @@
+# ======================================================================
+# EasyShopBuilder — Netlify redirects
+# - Canonical domain to apex + HTTPS
+# - Normalize index.html to clean URLs
+# - (Non-FR → EN language redirect is handled client-side in assets/main.js)
+# ======================================================================
+
+# Canonical domain: force apex + HTTPS
+http://www.easyshopbuilder.com/*   https://easyshopbuilder.com/:splat   301!
+http://easyshopbuilder.com/*       https://easyshopbuilder.com/:splat   301!
+https://www.easyshopbuilder.com/*  https://easyshopbuilder.com/:splat   200!
+
+# Clean URLs (drop index.html and force canonical slugs)
+ /index.html                       /                         301!
+ /en/index.html                    /en/                      301!
+ /blog-shopify.html                /blog-shopify             200
+ /blog-Shopify.html                /blog-shopify.html        301!
+ /blog.html                        /blog                     200
+ /mentions-legales.html            /mentions-legales         301!
+ /politique-de-confidentialite.html   /politique-de-confidentialite   301!
+ /en/blog.html                     /en/blog                  200
+ /en/blog-shopify.html             /en/blog-shopify          200
+ /en/blog-Shopify.html             /en/blog-shopify.html     301!
+ /en/legal-notice.html             /en/legal-notice          301!
+ /en/privacy-policy.html           /en/privacy-policy        301!
+
+# (Optional) Language-based redirects via Accept-Language (server-side)
+# Uncomment to redirect common non-FR locales to EN at the root.
+# /*   /en/:splat   302!   Language=en
+# /*   /en/:splat   302!   Language=de
+# /*   /en/:splat   302!   Language=es
+# /*   /en/:splat   302!   Language=it
+# /*   /en/:splat   302!   Language=pt
+# /*   /en/:splat   302!   Language=nl
+# /*   /en/:splat   302!   Language=sv
+# /*   /en/:splat   302!   Language=da
+# /*   /en/:splat   302!   Language=no
+# /*   /en/:splat   302!   Language=fi
+# /*   /en/:splat   302!   Language=pl
+# /*   /en/:splat   302!   Language=cs
+# /*   /en/:splat   302!   Language=ru
+# /*   /en/:splat   302!   Language=ja
+# /*   /en/:splat   302!   Language=ko
+# /*   /en/:splat   302!   Language=zh

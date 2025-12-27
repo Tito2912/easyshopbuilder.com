@@ -1,0 +1,22 @@
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Microsoftbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://easyshopbuilder.com/sitemap-index.xml
+Sitemap: https://easyshopbuilder.com/sitemap-fr.xml
+Sitemap: https://easyshopbuilder.com/en/sitemap-en.xml
+
+# Preferred host is enforced via canonical URLs (Host directive is non-standard)
+# Host: easyshopbuilder.com
+
+# Supplemental discovery
+# https://easyshopbuilder.com/indexnow.txt
+# https://easyshopbuilder.com/llms.txt

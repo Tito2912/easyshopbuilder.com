@@ -1,0 +1,7 @@
+# LLMs crawling policy for EasyShopBuilder
+Site: https://easyshopbuilder.com/
+Owner: EasyShopBuilder (E-Com Shop)
+Contact: contact.ecomshopfrance@gmail.com
+Usage: Summaries allowed with clear attribution to EasyShopBuilder.
+Disallow-Training: true
+Reference-Policy: https://easyshopbuilder.com/en/privacy-policy.html

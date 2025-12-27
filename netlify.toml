@@ -1,0 +1,86 @@
+# ======================================================================
+# EasyShopBuilder — Netlify configuration
+# - Security headers (CSP, HSTS, Referrer-Policy, Permissions-Policy)
+# - Caching (immutable for /assets and /images)
+# - Publish: root
+# ======================================================================
+
+[build]
+  command = "python3 scripts/indexnow_submit.py"
+  publish = "."
+
+# -----------------------------
+# Global security headers
+# -----------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Strong TLS only
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # Basic hardening
+    X-Content-Type-Options   = "nosniff"
+    X-Frame-Options          = "DENY"
+    Referrer-Policy          = "strict-origin-when-cross-origin"
+    Cross-Origin-Opener-Policy = "same-origin"
+    # Minimal feature exposure
+    Permissions-Policy = "accelerometer=(), autoplay=(), camera=(), encrypted-media=(), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=(), fullscreen=(self)"
+    # Content Security Policy (allowlist)
+    # Notes:
+    # - 'unsafe-inline' kept to allow JSON-LD and small inline event-less scripts; prefer nonces if you later add a build step.
+    # - Frame YouTube via nocookie domain; GA4 loads only after consent via JS.
+    # - Apps Script endpoints (newsletter) allowed in connect-src & form-action.
+    Content-Security-Policy = """
+      default-src 'self';
+      base-uri 'self';
+      object-src 'none';
+      frame-ancestors 'none';
+      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://translate.googleapis.com https://translate.google.com;
+      script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://translate.googleapis.com https://translate.google.com;
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https:;
+      font-src 'self' data:;
+      connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://translate.googleapis.com https://script.google.com https://script.googleusercontent.com https://*.googleusercontent.com;
+      frame-src https://www.youtube-nocookie.com https://www.google.com/recaptcha/;
+      media-src 'self' https:;
+      form-action 'self' https://script.google.com;
+      upgrade-insecure-requests;
+    """
+
+# -----------------------------
+# Assets: long-term caching
+# -----------------------------
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Vidéos hébergées localement : on empêche leur indexation tout en autorisant la mise en cache.
+  for = "/videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Robots-Tag = "noindex, nofollow"
+
+# -----------------------------
+# HTML: short cache (easy rollbacks)
+# -----------------------------
+[[headers]]
+  for = "/*.{html,htm}"
+  [headers.values]
+    Cache-Control = "public, max-age=60, must-revalidate"
+
+# -----------------------------
+# Compression hints (Netlify auto-compresses gzip/brotli)
+# -----------------------------
+# -----------------------------
+# Optional: 404 fallback (kept simple; real redirects in /_redirects)
+# -----------------------------
+# [[redirects]]
+#   from = "/*"
+#   to = "/404.html"
+#   status = 404
