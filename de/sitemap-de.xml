@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://easyshopbuilder.com/</loc>
+    <loc>https://easyshopbuilder.com/de/</loc>
     <lastmod>2026-01-24</lastmod>
     <priority>0.80</priority>
   
@@ -9,7 +9,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://easyshopbuilder.com/de/"/>
 </url>
   <url>
-    <loc>https://easyshopbuilder.com/blog</loc>
+    <loc>https://easyshopbuilder.com/de/blog</loc>
     <lastmod>2025-11-08</lastmod>
     <priority>0.75</priority>
   
@@ -17,7 +17,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://easyshopbuilder.com/de/blog"/>
 </url>
   <url>
-    <loc>https://easyshopbuilder.com/blog-shopify</loc>
+    <loc>https://easyshopbuilder.com/de/blog-shopify</loc>
     <lastmod>2025-11-08</lastmod>
     <priority>0.75</priority>
   
@@ -25,19 +25,19 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://easyshopbuilder.com/de/blog-shopify"/>
 </url>
   <url>
-    <loc>https://easyshopbuilder.com/mentions-legales</loc>
+    <loc>https://easyshopbuilder.com/de/legal-notice</loc>
     <lastmod>2025-11-08</lastmod>
     <priority>0.60</priority>
   
-    <xhtml:link rel="alternate" hreflang="es" href="https://easyshopbuilder.com/es/mentions-legales"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://easyshopbuilder.com/de/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://easyshopbuilder.com/es/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://easyshopbuilder.com/de/legal-notice"/>
 </url>
   <url>
-    <loc>https://easyshopbuilder.com/politique-de-confidentialite</loc>
+    <loc>https://easyshopbuilder.com/de/privacy-policy</loc>
     <lastmod>2025-11-08</lastmod>
     <priority>0.60</priority>
   
-    <xhtml:link rel="alternate" hreflang="es" href="https://easyshopbuilder.com/es/politique-de-confidentialite"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://easyshopbuilder.com/de/politique-de-confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://easyshopbuilder.com/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://easyshopbuilder.com/de/privacy-policy"/>
 </url>
 </urlset>
