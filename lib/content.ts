@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { compileMDX } from 'next-mdx-remote/rsc';
+import { SmartLink } from '@/components/SmartLink';
 import type { Post, PostType } from '@/lib/types';
 import type { TocHeading } from '@/components/TableOfContents';
 import { SITE } from '@/lib/site';
@@ -340,6 +341,9 @@ export async function getPostByRouteSegments(segments: string[]): Promise<Post |
   // Build-time compilation of trusted local MDX.
   const compiled = await compileMDX({
     source: mdxSource,
+    components: {
+      a: SmartLink,
+    },
     options: {
       parseFrontmatter: false,
       mdxOptions: {
