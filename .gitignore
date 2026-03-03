@@ -1,0 +1,13 @@
+# Next.js
+node_modules/
+.next/
+out/
+
+# Local tooling
+.venv/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
+

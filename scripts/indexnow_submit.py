@@ -23,6 +23,8 @@ ENDPOINT = os.getenv("INDEXNOW_ENDPOINT", "https://www.bing.com/indexnow")
 MAX_URLS = int(os.getenv("INDEXNOW_MAX_URLS", "10000"))
 SKIP = os.getenv("INDEXNOW_SKIP")
 DRY_RUN = os.getenv("INDEXNOW_DRY_RUN")
+SCAN_DIR = os.getenv("INDEXNOW_SCAN_DIR", "out").strip()
+SCAN_ROOT = PROJECT_ROOT if SCAN_DIR in {"", ".", "./"} else (PROJECT_ROOT / SCAN_DIR)
 
 EXCLUDED_DIRS = {".git", ".github", ".idea", ".netlify", "node_modules", "scripts", "__pycache__"}
 TARGET_SUFFIXES = (".html", ".htm")
@@ -37,8 +39,7 @@ def should_skip(relative_path: Path) -> bool:
 
 
 def normalize_url_path(relative_path: Path) -> str:
-    """Convert a Path inside the repo to a URL path."""
-    parts = relative_path.parts
+    """Convert an exported HTML path into a canonical pretty URL path."""
     if relative_path.name.lower() in {"index.html", "index.htm"}:
         if relative_path.parent == Path("."):
             url_path = "/"
@@ -46,7 +47,11 @@ def normalize_url_path(relative_path: Path) -> str:
             parent = relative_path.parent.as_posix().rstrip("/")
             url_path = f"/{parent}/"
     else:
-        url_path = f"/{relative_path.as_posix()}"
+        stem_path = relative_path.with_suffix("")
+        if stem_path.parent == Path(".") and stem_path.name in {"en", "es", "de"}:
+            url_path = f"/{stem_path.name}/"
+        else:
+            url_path = f"/{stem_path.as_posix()}"
 
     # Collapse any double slashes that could appear after rstrip/concat.
     while "//" in url_path:
@@ -61,19 +66,23 @@ def normalize_url_path(relative_path: Path) -> str:
 
 
 def discover_html_files() -> List[Path]:
-    """Return every HTML-like file that should be announced to IndexNow."""
+    """Return every exported HTML file that should be announced to IndexNow."""
     collected: List[Path] = []
     for suffix in TARGET_SUFFIXES:
-        for path in PROJECT_ROOT.rglob(f"*{suffix}"):
+        for path in SCAN_ROOT.rglob(f"*{suffix}"):
             try:
-                relative = path.relative_to(PROJECT_ROOT)
+                relative = path.relative_to(SCAN_ROOT)
             except ValueError:
                 continue
             if should_skip(relative):
                 continue
+            if any(part.startswith("_") for part in relative.parts):
+                continue
+            if relative.name.lower() in {"404.html", "404.htm"}:
+                continue
             collected.append(path)
 
-    collected.sort(key=lambda item: item.relative_to(PROJECT_ROOT).as_posix())
+    collected.sort(key=lambda item: item.relative_to(SCAN_ROOT).as_posix())
 
     unique: List[Path] = []
     seen: Set[Path] = set()
@@ -88,7 +97,7 @@ def discover_html_files() -> List[Path]:
 def build_url_list(paths: Iterable[Path]) -> List[str]:
     urls: List[str] = []
     for path in paths:
-        relative = path.relative_to(PROJECT_ROOT)
+        relative = path.relative_to(SCAN_ROOT)
         url_path = normalize_url_path(relative)
         if url_path == "/":
             url = f"{BASE_URL}/"
@@ -146,10 +155,17 @@ def main() -> int:
 
     key_file = PROJECT_ROOT / KEY_FILE_NAME
     if not key_file.exists():
+        key_file = PROJECT_ROOT / "public" / KEY_FILE_NAME
+
+    if not key_file.exists():
         print(
             f"IndexNow warning: key file '{KEY_FILE_NAME}' is missing locally; make sure it is deployed.",
             file=sys.stderr,
         )
+
+    if not SCAN_ROOT.exists():
+        print(f"IndexNow: scan directory '{SCAN_ROOT}' not found; skipping submission.")
+        return 0
 
     html_files = discover_html_files()
     if not html_files:

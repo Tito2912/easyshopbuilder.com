@@ -1,0 +1,163 @@
+---
+title: "Politique de confidentialité (RGPD) | EasyShopBuilder"
+description: "Politique de confidentialité d’EasyShopBuilder : données collectées, finalités, bases légales, durées de conservation, droits RGPD, cookies et transferts."
+lang: "fr"
+translationKey: "privacy_policy"
+canonical: "/politique-de-confidentialite"
+type: "legal"
+updatedAt: "2025-09-13"
+internalLinks:
+  - href: "/"
+    anchor: "Retour à l’accueil"
+  - href: "/mentions-legales"
+    anchor: "Lire les mentions légales"
+  - href: "/blog"
+    anchor: "Voir le blog"
+---
+
+<section className="section">
+  <div className="stack">
+    <h1>Politique de confidentialité</h1>
+    <p className="muted">Dernière mise à jour : 13 septembre 2025</p>
+  </div>
+</section>
+
+<p className="note">
+  Cette page décrit comment EasyShopBuilder traite vos données personnelles conformément au{' '}
+  <strong>Règlement (UE) 2016/679</strong> (RGPD) et aux lois françaises applicables. Elle s’applique à{' '}
+  <em>easyshopbuilder.com</em> et à ses sous-pages.
+</p>
+
+## 1. Responsable de traitement
+
+**EasyShopBuilder**, contact : <a href="mailto:contact.ecomshopfrance@gmail.com">contact.ecomshopfrance@gmail.com</a>.
+
+Adresse postale : E-Com Shop, 60 rue Francois 1er, 75008 Paris, France.
+
+## 2. Finalités, bases légales et données traitées
+
+<div className="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Finalité</th>
+        <th>Base légale</th>
+        <th>Données</th>
+        <th>Durée</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Envoi de la newsletter</td>
+        <td>Consentement (art. 6-1 a)</td>
+        <td>E-mail, date/heure d’inscription, IP (anti-abus), statut double opt-in (si activé)</td>
+        <td>Jusqu’au retrait du consentement ou 24 mois d’inactivité</td>
+      </tr>
+      <tr>
+        <td>Métriques d’audience (GA4)</td>
+        <td>
+          Consentement (art. 6-1 a) — <em>non chargé par défaut</em>
+        </td>
+        <td>Identifiants/événements Analytics (si opt-in)</td>
+        <td>13 mois (période usuelle de conservation Analytics)</td>
+      </tr>
+      <tr>
+        <td>
+          Sécurité anti-bots (reCAPTCHA v3) <span className="muted">(si activée)</span>
+        </td>
+        <td>Intérêt légitime (art. 6-1 f) — sécuriser les formulaires</td>
+        <td>Données techniques de navigation évaluées par Google</td>
+        <td>Selon politique de Google (voir transferts)</td>
+      </tr>
+      <tr>
+        <td>Journal de consentement cookies</td>
+        <td>Obligation légale + intérêt légitime</td>
+        <td>Préférences, horodatage, identifiant session (stockés localement)</td>
+        <td>13 mois puis purge</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## 3. Provenance des données
+
+- **Directement auprès de vous** (formulaire newsletter, préférences cookies).
+- **Automatique** : uniquement après consentement Analytics (événements GA4) ou à des fins de sécurité (reCAPTCHA v3 si
+  activée).
+
+## 4. Destinataires et sous-traitants
+
+- **Hébergement/Delivery :** Netlify, Inc. (États-Unis) — engagements de conformité et DPA publiés par Netlify.
+- **Formulaire newsletter :** Google Apps Script (Web App) & Google Sheets (Google Ireland/LLC).
+- **Mesure d’audience & reCAPTCHA :** Google (Google Ireland/LLC). GA4 n’est chargé qu’après votre opt-in.
+
+## 5. Transferts hors UE
+
+Certains fournisseurs (Netlify, Google) sont susceptibles de traiter des données hors de l’UE. Nous nous appuyons sur
+les mécanismes mis en place par ces fournisseurs (DPA, Clauses Contractuelles Types, cadre transatlantique adéquat le
+cas échéant). Les données Analytics ne sont envoyées qu’après votre consentement explicite.
+
+## 6. Vos droits
+
+Conformément aux articles 15 à 22 du RGPD : droit d’accès, rectification, effacement, limitation, opposition,
+portabilité. Pour exercer vos droits :{' '}
+<a href="mailto:contact.ecomshopfrance@gmail.com">contact.ecomshopfrance@gmail.com</a>. Vous pouvez également saisir la
+CNIL :{' '}
+<a href="https://www.cnil.fr" rel="noopener noreferrer" target="_blank">
+  cnil.fr
+</a>
+.
+
+## 7. Cookies & traceurs
+
+Nous utilisons une bannière de consentement **opt-in** distinguant :
+
+- **Nécessaires** (toujours actifs) : préférences de consentement (localStorage), sécurité anti-spam (honeypot/délai),
+  redirection de langue.
+- **Analytics (optionnels)** : Google Analytics 4, chargé via `www.googletagmanager.com` _uniquement_ après votre accord.
+
+Vous pouvez **modifier votre consentement** à tout moment via le lien « Préférences cookies » (pied de page) ou en
+effaçant les données de site/localStorage de votre navigateur.
+
+## 8. Newsletter (Google Sheets)
+
+Le formulaire enregistre votre e-mail dans une feuille Google Sheets hébergée dans votre compte Google (propriété de
+l’éditeur). Un **honeypot** et un **délai anti-bot** sont utilisés. Optionnellement, **reCAPTCHA v3** peut être activé à
+des fins de sécurité ; le cas échéant, l’information est affichée et le service de Google s’applique.
+
+## 9. Mesures de sécurité
+
+- Transport chiffré (HTTPS/TLS) et **HSTS**.
+- **CSP restrictive** limitant les sources (YouTube nocookie, Google Tag Manager, translate.googleapis.com,
+  translate.google.com, gstatic.com, domaine Apps Script).
+- **Referrer-Policy** stricte, **Permissions-Policy** minimale.
+- Isolation des scripts : Analytics bloqués tant que non consentis.
+- Journal local du consentement et possibilité de retrait à tout moment.
+
+## 10. Conservation
+
+- **Newsletter** : jusqu’au retrait du consentement ou 24 mois d’inactivité, puis suppression/anonymisation.
+- **Consentement cookies** : 13 mois.
+- **Logs techniques de sécurité** : jusqu’à 12 mois si nécessaire.
+
+## 11. Contact & réclamations
+
+Pour toute question relative à cette politique :{' '}
+<a href="mailto:contact.ecomshopfrance@gmail.com">contact.ecomshopfrance@gmail.com</a>.
+<br />
+Autorité de contrôle :{' '}
+<a href="https://www.cnil.fr" rel="noopener noreferrer" target="_blank">
+  CNIL
+</a>
+.
+
+## 12. Modifications
+
+Nous pouvons mettre à jour cette politique pour refléter des évolutions légales ou techniques. La date de dernière mise à
+jour figure en haut de page.
+
+<p className="muted">
+  Ce document est fourni à titre d’information générale et ne constitue pas un conseil juridique. Adaptez-le à votre
+  situation (liste de sous-traitants, DPA signés, bases légales spécifiques, mentions propres aux pays ciblés).
+</p>
+
