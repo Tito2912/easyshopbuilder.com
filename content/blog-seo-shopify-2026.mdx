@@ -1,0 +1,596 @@
+---
+title: "SEO Shopify 2026 (mars 2026) : guide complet pour référencer votre boutique"
+description: "Guide SEO Shopify 2026 : fondations techniques, Core Web Vitals, contenu, données structurées, international (Markets) et maillage interne — avec une checklist 30/90 jours."
+lang: "fr"
+translationKey: "seo_shopify_2026"
+canonical: "/blog-seo-shopify-2026"
+type: "article"
+primaryKeyword: "SEO Shopify"
+date: "2026-03-05"
+updatedAt: "2026-03-05"
+jumpLinks:
+  - href: "#resume"
+    label: "Résumé & checklist"
+  - href: "#bases-techniques"
+    label: "Bases techniques (indexation, canonicals)"
+  - href: "#performance"
+    label: "Vitesse & Core Web Vitals"
+  - href: "#on-page"
+    label: "On-page (produits, collections)"
+  - href: "#contenu"
+    label: "Contenu (clusters, intention)"
+  - href: "#donnees-structurees"
+    label: "Données structurées (rich results)"
+  - href: "#maillage"
+    label: "Maillage interne (architecture)"
+  - href: "#international"
+    label: "International & hreflang"
+  - href: "#mesure"
+    label: "Mesure (GSC, GA4)"
+  - href: "#plan-30-90"
+    label: "Plan d’action 30/90 jours"
+  - href: "#faq-article"
+    label: "FAQ"
+quickAnswer:
+  - "Priorisez l’indexation + vos pages « argent » (collections/produits) : c’est là que se joue l’essentiel du ROI."
+  - "Réduisez la dette « apps & scripts » : moins de JS = meilleure vitesse = plus de conversions et de positions."
+  - "Structurez vos collections comme de vraies catégories SEO, puis appuyez-les avec des contenus « hub »."
+  - "Ajoutez/validez les données structurées (Product, Breadcrumb, FAQ) et surveillez les erreurs dans Search Console."
+  - "Déployez un plan 30/90 jours : technique → contenu → maillage → itérations."
+cta:
+  title: "Prêt à lancer une boutique Shopify rapide et SEO-friendly ?"
+  body: "Démarrez sur Shopify, puis appliquez la checklist de ce guide pour consolider le socle technique et éditorial avant d’accélérer."
+  buttonLabel: "Essayer Shopify gratuitement"
+  buttonHref: "https://shopify.pxf.io/6yLX0r"
+internalLinks:
+  - href: "/blog-optimiser-conversion-shopify-2026"
+    anchor: "Optimiser la conversion Shopify en 2026 (CRO + checkout)"
+  - href: "/blog-shopify"
+    anchor: "Shopify avis 2025 : fonctionnalités, prix, alternatives"
+  - href: "/blog"
+    anchor: "Voir tous les articles EasyShopBuilder"
+  - href: "/"
+    anchor: "Revenir à l’accueil"
+faq:
+  - q: "Shopify est-il bon pour le SEO en 2026 ?"
+    a: "Oui : Shopify offre un socle technique robuste (CDN, sitemaps, canonicals), mais la performance du thème, les apps, l’architecture de collections et la qualité du contenu restent déterminants."
+  - q: "Faut-il créer un blog si je vends surtout via des fiches produit ?"
+    a: "Souvent oui : le blog capte les intentions d’information (guides, comparatifs) et renforce le maillage vers collections/produits. L’objectif n’est pas le trafic « vanity », mais la progression vers l’achat."
+  - q: "Comment éviter le contenu dupliqué sur Shopify ?"
+    a: "Surveillez les variantes d’URL (paramètres de filtres, collections multiples, pages tag). Gardez une canonical cohérente et évitez de multiplier des pages quasi-identiques sans valeur additionnelle."
+  - q: "Core Web Vitals a-t-il un impact sur le référencement ?"
+    a: "À contenu comparable, la vitesse et la stabilité visuelle aident : elles améliorent l’expérience, réduisent le rebond et facilitent le crawl. Sur Shopify, le choix du thème et la discipline sur les apps font la différence."
+  - q: "Dois-je traduire mon site pour vendre à l’international ?"
+    a: "Si le potentiel existe, oui — mais avec une vraie traduction (pas seulement automatique), des hreflang corrects et une stratégie par marché (devises, livraison, retours)."
+---
+
+<section className="section page-hero">
+  <div className="stack">
+    <p className="muted">GUIDE SEO — MARS 2026</p>
+    <h1>SEO Shopify 2026 : guide complet pour référencer votre boutique</h1>
+    <p className="lead">
+      Le SEO Shopify n’est pas une liste de « hacks » : c’est un <strong>système</strong> — architecture, vitesse, contenu, maillage
+      et mesure. Ce guide (mis à jour en <strong>mars 2026</strong>) vous donne une méthode claire pour obtenir des pages
+      indexées, pertinentes, rapides et orientées conversion.
+    </p>
+    <p className="muted">
+      <time dateTime="2026-03-05">5 mars 2026</time> · ~18–22 min de lecture · niveaux : débutant → avancé
+    </p>
+    <div className="cta-row">
+      <a className="btn cta" href="https://shopify.pxf.io/6yLX0r" rel="sponsored noopener noreferrer" target="_blank">
+        Essayer Shopify gratuitement
+      </a>
+      <a className="btn ghost" href="#resume">
+        Voir la checklist
+      </a>
+      <a className="btn ghost" href="/blog">
+        Retour au blog
+      </a>
+    </div>
+    <figure className="wide">
+      <img
+        alt="Checklist SEO Shopify (technique, vitesse, contenu, maillage interne)"
+        decoding="async"
+        height="630"
+        loading="lazy"
+        src="/images/capture-ecran-dashboard.jpg"
+        width="1200"
+      />
+      <figcaption className="muted">Objectif : pages indexées, rapides et utiles — puis itération.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section className="section" id="resume">
+  <div className="stack">
+    <h2 id="resume">Résumé (à lire en 3 minutes)</h2>
+    <p>
+      Si vous ne devez retenir qu’une chose : <strong>en 2026, le SEO Shopify se gagne sur les fondamentaux</strong>.
+      Les algorithmes évoluent, la SERP devient plus « assistée » (résultats enrichis, réponses générées), mais le moteur
+      récompense toujours les mêmes signaux : une page <em>crawlab le</em>, <em>rapide</em>, <em>pertinente</em> et
+      <em> fiable</em>.
+    </p>
+    <h3>La checklist « 80/20 »</h3>
+    <ul className="list">
+      <li>
+        <strong>Indexation :</strong> sitemap OK, robots.txt cohérent, pas de pages inutiles indexées (tags, paramètres).
+      </li>
+      <li>
+        <strong>Architecture :</strong> collections = catégories SEO, profondeur limitée, navigation claire, breadcrumbs.
+      </li>
+      <li>
+        <strong>Performance :</strong> thème léger, images optimisées, apps strictement nécessaires, scripts différés.
+      </li>
+      <li>
+        <strong>On-page :</strong> titres utiles, H1 cohérent, descriptions de collections, fiches produit complètes.
+      </li>
+      <li>
+        <strong>Maillage :</strong> liens contextuels (guides → collections → produits), ancres descriptives, clusters.
+      </li>
+      <li>
+        <strong>Mesure :</strong> Google Search Console + GA4 + tableau de bord (positions, CTR, crawl, revenus SEO).
+      </li>
+    </ul>
+    <p className="note">
+      Conseil EasyShopBuilder : avant d’« écrire plus », <strong>supprimez le bruit</strong> (pages pauvres, filtres indexés,
+      apps lourdes). C’est souvent le levier le plus rapide pour remonter — et pour convertir.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="bases-techniques">
+  <div className="stack">
+    <h2 id="bases-techniques">1) Bases techniques : indexation, canonicals, duplication</h2>
+    <p>
+      Shopify donne un socle solide (CDN, HTTPS, sitemap), mais la plupart des chutes SEO viennent d’un trio classique :
+      <strong> pages dupliquées</strong>, <strong>pages inutiles indexées</strong> et <strong>maillage confus</strong>.
+      L’objectif n’est pas d’avoir « plus de pages », mais de concentrer le crawl sur les pages qui vendent.
+    </p>
+
+    <h3>A. Vérifier l’indexation (sans se tromper de métrique)</h3>
+    <ul className="list">
+      <li>
+        <strong>Google Search Console :</strong> suivez « Pages indexées », « Explorées mais non indexées », erreurs 404 et
+        redirections. Une hausse de pages « découvertes » n’est pas une victoire si elles ne génèrent pas de clics.
+      </li>
+      <li>
+        <strong>Analyse par répertoires :</strong> produits, collections, pages, blog. Le trafic SEO e-commerce vient
+        souvent des <em>collections</em> (intention commerciale) + des <em>produits</em> (intention transactionnelle).
+      </li>
+      <li>
+        <strong>Priorisez :</strong> 10 collections et 50 produits stratégiques. Le SEO est un jeu de focus.
+      </li>
+    </ul>
+
+    <h3>B. Canonicals : le garde-fou contre les variantes d’URL</h3>
+    <p>
+      Sur Shopify, une même fiche produit peut parfois être accessible via plusieurs chemins (navigation par collections,
+      variantes, paramètres). Le rôle de la <strong>balise canonical</strong> est de dire à Google : « voici la version
+      préférée ». Une canonical cohérente évite de diluer le signal SEO.
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Règle :</strong> 1 intention = 1 URL indexée. Les variations (tri, filtres, paramètres) doivent en général
+        rester <em>non indexées</em>.
+      </li>
+      <li>
+        <strong>Collections :</strong> évitez d’avoir 5 collections qui racontent la même chose (« baskets », « sneakers »,
+        « chaussures de sport ») si vous n’avez pas une différence réelle (assortiment, angle, contenu).
+      </li>
+    </ul>
+
+    <h3>C. Paramètres, filtres, facettes : le piège n°1 des boutiques</h3>
+    <p>
+      Les filtres et facettes améliorent l’UX, mais peuvent créer une infinité d’URL (couleur, taille, prix, stock).
+      Indexer ces variantes est rarement bénéfique au début : Google explore beaucoup… et valorise peu.
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Principe :</strong> filtres utiles à l’utilisateur, mais <em>contrôle</em> de ce qui s’indexe.
+      </li>
+      <li>
+        <strong>Signal d’alerte :</strong> Search Console affiche des centaines de pages « dupliquées » ou « alternatives
+        avec canonical » provenant de paramètres.
+      </li>
+      <li>
+        <strong>Approche progressive :</strong> commencez avec un index propre, puis « ouvrez » certaines facettes si vous
+        avez la capacité de produire du contenu différenciant (ex. pages « chaussures de randonnée imperméables »).
+      </li>
+    </ul>
+
+    <h3>D. Blog & pages informationnelles : utiles, mais avec un plan</h3>
+    <p>
+      Un blog sans stratégie devient vite une pile d’articles « jolis » qui n’amènent pas de ventes. Le bon usage en 2026 :
+      créer des contenus qui répondent aux questions <em>avant</em> l’achat, puis les relier à vos collections/produits.
+      Exemple : un guide « comment choisir X » qui pousse vers la collection X.
+    </p>
+    <p>
+      Si vous partez de zéro, commencez par un article pilier (hub) et 4–6 articles satellites. Sur EasyShopBuilder, vous
+      pouvez déjà lire notre article principal : <a href="/blog-shopify">Shopify avis 2025</a>. Dans ce guide, on va surtout
+      vous montrer comment bâtir la mécanique SEO autour.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="performance">
+  <div className="stack">
+    <h2 id="performance">2) Vitesse &amp; Core Web Vitals : le levier « double impact » (SEO + conversion)</h2>
+    <p>
+      Sur e-commerce, la performance n’est pas un sujet « technique » : c’est un sujet <strong>business</strong>. Une boutique plus
+      rapide : (1) se fait mieux explorer, (2) convertit davantage. En 2026, ce point est encore plus vrai à cause du poids
+      des scripts marketing et des apps.
+    </p>
+
+    <h3>A. Ce qui rend une boutique Shopify lente (dans 80% des cas)</h3>
+    <ul className="list">
+      <li>
+        <strong>Apps empilées :</strong> popups, upsells, avis, tracking, chat… chacune ajoute JS/CSS et des requêtes réseau.
+      </li>
+      <li>
+        <strong>Images non optimisées :</strong> trop lourdes, pas de formats modernes, pas de tailles adaptées mobile.
+      </li>
+      <li>
+        <strong>Polices &amp; animations :</strong> trop de variantes, chargement bloquant, effets coûteux.
+      </li>
+      <li>
+        <strong>Thème « sur-designé » :</strong> sections inutiles, DOM gigantesque, sliders partout.
+      </li>
+    </ul>
+
+    <h3>B. Checklist performance (sans casser le marketing)</h3>
+    <ul className="list">
+      <li>
+        <strong>Faites l’inventaire :</strong> listez les apps, scripts (GTM, pixels, widgets) et mesurez l’impact
+        (PageSpeed + WebPageTest). Gardez ce qui a un ROI démontré.
+      </li>
+      <li>
+        <strong>Images :</strong> compressez, utilisez des tailles responsive, limitez les carrousels, privilégiez 1 image
+        « hero » forte plutôt que 6 moyennes.
+      </li>
+      <li>
+        <strong>Chargement :</strong> différer les scripts non critiques, lazy-load sous la ligne de flottaison,
+        précharger seulement ce qui est essentiel.
+      </li>
+      <li>
+        <strong>Thème :</strong> choisissez un thème mobile-first, maintenu, avec une base propre. Un bon thème vaut mieux
+        qu’un thème « flashy » + 12 apps.
+      </li>
+    </ul>
+
+    <p className="note">
+      Pour aller plus loin côté conversion, lisez aussi : <a href="/blog-optimiser-conversion-shopify-2026">Optimiser la conversion Shopify en 2026</a>.
+      SEO et CRO ne s’opposent pas : ils se renforcent si vous pensez « expérience ».
+    </p>
+
+    <h3>C. Core Web Vitals : comment l’utiliser sans obsession</h3>
+    <p>
+      Visez la cohérence, pas la perfection. Si vous améliorez la vitesse « perçue » (interaction rapide, stabilité visuelle),
+      vous améliorez aussi les signaux comportementaux (temps passé, pages vues, engagement) — ce qui aide indirectement le SEO.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="on-page">
+  <div className="stack">
+    <h2 id="on-page">3) On-page SEO : produits, collections, pages clés</h2>
+    <p>
+      Sur Shopify, l’on-page ne se limite pas à « mettre un mot-clé dans le titre ». L’enjeu est d’aligner{' '}
+      <strong>intention de recherche</strong> ↔ <strong>type de page</strong> ↔ <strong>preuve</strong> (contenu, avis, specs,
+      livraison, retours).
+    </p>
+
+    <h3>A. Collections : vos pages SEO les plus rentables</h3>
+    <p>
+      Une collection est une « catégorie » : elle doit expliquer ce que l’utilisateur va trouver, et comment choisir.
+      En 2026, une collection optimisée contient :
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Un H1 clair :</strong> « Chaussures de randonnée imperméables », pas « Collection #12 ».
+      </li>
+      <li>
+        <strong>Un bloc de contenu utile :</strong> 150–300 mots en haut (ou en bas si vous préférez), avec critères d’achat,
+        matières, usage, entretien.
+      </li>
+      <li>
+        <strong>Des liens internes :</strong> vers 3–6 sous-collections ou guides (ex. « comment choisir »).
+      </li>
+      <li>
+        <strong>Une logique de tri :</strong> best-sellers en premier, puis nouveautés, puis prix.
+      </li>
+    </ul>
+
+    <h3>B. Fiches produit : l’objectif est de lever les objections</h3>
+    <p>
+      Les pages produit rankent sur des requêtes très transactionnelles. Votre job SEO/CRO est le même : répondre aux objections.
+      Checklist 2026 :
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Titre :</strong> nom + attribut différenciant (matière, modèle, usage). Évitez les titres « internes ».
+      </li>
+      <li>
+        <strong>Spécifications :</strong> dimensions, poids, compatibilités, guide tailles, entretien.
+      </li>
+      <li>
+        <strong>Preuves :</strong> avis clients, photos UGC, garanties, retours, délais réels.
+      </li>
+      <li>
+        <strong>FAQ produit :</strong> 5–8 questions récurrentes (livraison, compatibilité, durabilité).
+      </li>
+      <li>
+        <strong>Maillage :</strong> liens vers la collection principale + 2–3 guides.
+      </li>
+    </ul>
+
+    <h3>C. Pages « confiance » : elles soutiennent aussi le SEO</h3>
+    <p>
+      Les pages livraison/retours, contact, À propos, garanties… ne sont pas seulement juridiques. Elles renforcent la
+      crédibilité, réduisent la friction et peuvent capter de la longue traîne (« retour + marque », « livraison + délai »).
+    </p>
+  </div>
+</section>
+
+<section className="section" id="contenu">
+  <div className="stack">
+    <h2 id="contenu">4) Stratégie de contenu 2026 : clusters, intention, et « preuve »</h2>
+    <p>
+      Le contenu e-commerce qui performe en SEO n’est pas un contenu « encyclopédique ». C’est un contenu qui aide à choisir,
+      comparer, installer, utiliser — puis acheter. Pensez en <strong>parcours</strong>.
+    </p>
+
+    <h3>A. Les 4 intentions à couvrir</h3>
+    <ul className="list">
+      <li>
+        <strong>Informationnelle :</strong> « comment choisir », « comment entretenir », « quelle taille ».
+      </li>
+      <li>
+        <strong>Comparative :</strong> « X vs Y », « meilleur X 2026 », « alternatives ».
+      </li>
+      <li>
+        <strong>Commerciale :</strong> « X pas cher », « X premium », « X pour [usage] » (souvent via collections).
+      </li>
+      <li>
+        <strong>Transactionnelle :</strong> produit exact, référence, modèle (souvent via pages produit).
+      </li>
+    </ul>
+
+    <h3>B. Construire un cluster (exemple concret)</h3>
+    <p>
+      Exemple (à adapter à votre niche) :
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Hub :</strong> « Guide complet [catégorie] » (explique critères, usages, erreurs).
+      </li>
+      <li>
+        <strong>Satellites :</strong> « [catégorie] pour débutants », « [catégorie] premium », « tailles », « entretien ».
+      </li>
+      <li>
+        <strong>Liens :</strong> hub ↔ satellites ↔ collection principale ↔ produits phares.
+      </li>
+    </ul>
+    <p>
+      Votre hub doit « distribuer » l’autorité SEO vers les pages qui vendent. Sans liens, un guide reste une impasse SEO.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="donnees-structurees">
+  <div className="stack">
+    <h2 id="donnees-structurees">5) Données structurées : product, breadcrumb, FAQ (et validation)</h2>
+    <p>
+      Les données structurées (schema.org) n’améliorent pas toujours le ranking directement, mais elles aident à obtenir des
+      résultats enrichis (prix, avis, disponibilité) et à clarifier votre page pour les moteurs.
+    </p>
+
+    <h3>A. Les schémas prioritaires pour une boutique</h3>
+    <ul className="list">
+      <li>
+        <strong>Product :</strong> nom, images, prix, disponibilité, marque, SKU/GTIN si disponible.
+      </li>
+      <li>
+        <strong>Breadcrumb :</strong> clarifie l’architecture (utile pour les collections).
+      </li>
+      <li>
+        <strong>FAQ :</strong> sur pages guides ou produits (si pertinent, sans sur-optimisation).
+      </li>
+    </ul>
+
+    <h3>B. Règle 2026 : validez, puis surveillez</h3>
+    <p>
+      Utilisez les outils de test des résultats enrichis (Google) et la section « Améliorations » de Search Console.
+      Une erreur de balisage peut faire disparaître un rich result du jour au lendemain.
+    </p>
+    <p className="note">
+      Astuce : n’ajoutez pas un schéma « partout ». Ajoutez-le là où il reflète vraiment le contenu. Les moteurs
+      pénalisent la manipulation (FAQ artificielles, avis inventés).
+    </p>
+  </div>
+</section>
+
+<section className="section" id="maillage">
+  <div className="stack">
+    <h2 id="maillage">6) Maillage interne : l’accélérateur SEO (et le guide de navigation)</h2>
+    <p>
+      Le maillage interne est votre levier le plus contrôlable. Il sert à (1) guider l’utilisateur, (2) guider le robot,
+      (3) transmettre l’autorité vers les pages stratégiques.
+    </p>
+
+    <h3>A. Les 3 niveaux de maillage à construire</h3>
+    <ul className="list">
+      <li>
+        <strong>Navigation (sitewide) :</strong> menu, footer, liens de catégories — stable et simple.
+      </li>
+      <li>
+        <strong>Contextuel :</strong> liens au milieu des guides, dans les descriptions de collections, FAQ, comparatifs.
+      </li>
+      <li>
+        <strong>Related content :</strong> « vous aimerez aussi », « à lire ensuite » — mais seulement si pertinent.
+      </li>
+    </ul>
+
+    <h3>B. La règle des ancres</h3>
+    <p>
+      Une bonne ancre décrit la destination (« guide SEO Shopify 2026 », « collection chaussures randonnée ») au lieu de
+      « cliquez ici ». Ne sur-optimisez pas : variez naturellement.
+    </p>
+
+    <h3>C. Exemple de maillage simple (mais puissant)</h3>
+    <ul className="list">
+      <li>
+        Article « comment choisir » → lien vers la collection correspondante.
+      </li>
+      <li>
+        Collection → liens vers 3 guides (taille, entretien, comparatif).
+      </li>
+      <li>
+        Produit → liens vers collection + guide « comment choisir » + guide « livraison/retours ».
+      </li>
+    </ul>
+    <p>
+      Sur EasyShopBuilder, nous faisons la même chose : lisez ensuite <a href="/blog-optimiser-conversion-shopify-2026">notre guide conversion 2026</a> pour transformer le trafic en ventes.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="international">
+  <div className="stack">
+    <h2 id="international">7) International : marchés, langue, hreflang (sans pièges)</h2>
+    <p>
+      Vendre à l’international est l’un des meilleurs accélérateurs de croissance… et l’un des plus gros générateurs
+      de duplication SEO si c’est mal géré. La règle : <strong>un marché = une proposition claire</strong>.
+    </p>
+
+    <h3>A. Traduction : qualité &amp; intention, pas seulement « mots »</h3>
+    <p>
+      Une traduction littérale peut rater l’intention. En 2026, les moteurs comprennent mieux les équivalences, mais ils
+      détectent aussi mieux le contenu faible. Traduisez en pensant aux requêtes locales, aux unités, à la logistique.
+    </p>
+
+    <h3>B. Hreflang : l’assurance anti-cannibalisation</h3>
+    <p>
+      Le hreflang indique quelle page servir selon la langue/pays. C’est indispensable si vous avez plusieurs versions
+      proches. Vérifiez que chaque version référence les autres (maillage hreflang réciproque).
+    </p>
+
+    <h3>C. Devises, livraison, retours : le SEO rejoint le produit</h3>
+    <p>
+      Une page qui ranke mais qui ne livre pas dans le pays ciblé crée de la frustration et des signaux négatifs.
+      Adaptez les pages clés : délais, coûts, politique de retours, taxes.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="mesure">
+  <div className="stack">
+    <h2 id="mesure">8) Mesure : Search Console + GA4 + KPI e-commerce</h2>
+    <p>
+      Sans mesure, vous confondez « effort » et « progrès ». En 2026, la mesure e-commerce doit relier SEO → revenus, pas seulement SEO → clics.
+    </p>
+
+    <h3>A. Les KPI indispensables</h3>
+    <ul className="list">
+      <li>
+        <strong>GSC :</strong> clics, impressions, CTR, positions (par pages et requêtes).
+      </li>
+      <li>
+        <strong>GA4/Shopify Analytics :</strong> revenus SEO, conversion, AOV, ajout au panier, checkout initié.
+      </li>
+      <li>
+        <strong>Qualité :</strong> taux de retour, SAV, avis — un SEO qui vend mal (ou qui déçoit) n’est pas durable.
+      </li>
+    </ul>
+
+    <h3>B. Méthode simple de pilotage</h3>
+    <ul className="list">
+      <li>
+        Chaque mois : top 20 pages SEO par revenus → 3 optimisations prioritaires.
+      </li>
+      <li>
+        Chaque semaine : erreurs d’exploration / redirections / 404 → correction.
+      </li>
+      <li>
+        Chaque trimestre : audit contenu → mise à jour des pages piliers.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="plan-30-90">
+  <div className="stack">
+    <h2 id="plan-30-90">9) Plan d’action (30 jours / 90 jours)</h2>
+    <p>
+      Voici un plan réaliste pour une boutique Shopify qui veut des résultats durables (sans équipe SEO dédiée).
+    </p>
+
+    <h3>Jours 1–30 : nettoyer &amp; stabiliser</h3>
+    <ul className="list">
+      <li>
+        Connecter GSC + GA4, vérifier indexation, corriger 404/redirections.
+      </li>
+      <li>
+        Réduire scripts/apps, optimiser images, choisir un thème propre.
+      </li>
+      <li>
+        Optimiser 10 collections + 20 produits (titres, descriptions, preuves, FAQ).
+      </li>
+    </ul>
+
+    <h3>Jours 31–90 : construire l’autorité</h3>
+    <ul className="list">
+      <li>
+        Publier 2 hubs (guides) + 6–10 satellites (questions récurrentes, comparatifs).
+      </li>
+      <li>
+        Mettre en place le maillage : guides → collections → produits.
+      </li>
+      <li>
+        Ajouter/valider les schémas structurés prioritaires.
+      </li>
+      <li>
+        Itérer sur les pages qui reçoivent des impressions mais peu de clics (CTR).
+      </li>
+    </ul>
+
+    <p className="note">
+      Après 90 jours, le SEO devient une routine : mise à jour des pages piliers, ajout de preuves (avis/UGC), et suppression
+      des pages faibles. C’est là que la croissance « s’installe ».
+    </p>
+  </div>
+</section>
+
+<section className="section" id="faq-article">
+  <div className="stack">
+    <h2 id="faq-article">FAQ — SEO Shopify (mars 2026)</h2>
+    <h3>Combien de temps pour obtenir des résultats SEO sur Shopify ?</h3>
+    <p>
+      Sur un site neuf, comptez souvent <strong>8 à 16 semaines</strong> pour des signaux clairs (impressions, premières positions),
+      et <strong>3 à 6 mois</strong> pour un trafic stable — selon la concurrence, la qualité et la régularité.
+    </p>
+    <h3>Faut-il viser des mots-clés « volume » ou « intention » ?</h3>
+    <p>
+      Visez d’abord l’intention. Un mot-clé à faible volume mais très transactionnel peut vendre plus qu’un mot-clé générique.
+      Les collections et produits stratégiques sont votre base.
+    </p>
+    <h3>Dois-je changer de thème pour le SEO ?</h3>
+    <p>
+      Pas forcément. Mais si votre thème est lent, surchargé, ou difficile à maintenir, un thème plus léger peut être un gain
+      immédiat (SEO + conversion). Mesurez avant/après.
+    </p>
+
+    <h2 id="sources">Sources &amp; outils utiles</h2>
+    <ul className="list">
+      <li>
+        Google Search Console (suivi indexation, CTR, erreurs) et Google Search Central (bonnes pratiques).
+      </li>
+      <li>
+        PageSpeed Insights / WebPageTest (performance) + Lighthouse (diagnostic).
+      </li>
+      <li>
+        Documentation Shopify (SEO, performance, checkout extensibility) — pour valider les éléments spécifiques à votre thème/apps.
+      </li>
+    </ul>
+  </div>
+</section>
+
