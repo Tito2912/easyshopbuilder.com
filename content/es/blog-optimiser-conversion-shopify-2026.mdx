@@ -1,0 +1,748 @@
+---
+title: "Optimizar la conversión en Shopify en 2026: checkout, fichas producto y rendimiento (guía completa)"
+description: "Guía CRO Shopify (marzo 2026): medir el embudo, acelerar la tienda, optimizar fichas/colecciones, reducir fricción en checkout (Shop Pay) e iterar con tests + analítica."
+lang: "es"
+translationKey: "conversion_shopify_2026"
+canonical: "/es/blog-optimiser-conversion-shopify-2026"
+type: "article"
+primaryKeyword: "tasa de conversión Shopify"
+date: "2026-03-05"
+updatedAt: "2026-03-05"
+jumpLinks:
+  - href: "#resumen"
+    label: "Resumen y framework"
+  - href: "#medir"
+    label: "Medir el embudo"
+  - href: "#velocidad"
+    label: "Velocidad y UX móvil"
+  - href: "#ficha-producto"
+    label: "Ficha producto (CRO)"
+  - href: "#colecciones"
+    label: "Colecciones (merchandising)"
+  - href: "#carrito"
+    label: "Carrito (reasegurar)"
+  - href: "#checkout"
+    label: "Checkout (fricción)"
+  - href: "#ofertas"
+    label: "Oferta y precio"
+  - href: "#confianza"
+    label: "Confianza y prueba"
+  - href: "#testing"
+    label: "Tests e iteración"
+  - href: "#retencion"
+    label: "Retención (LTV)"
+  - href: "#plan-14-30-90"
+    label: "Plan 14/30/90 días"
+  - href: "#faq-articulo"
+    label: "FAQ"
+quickAnswer:
+  - "Optimiza por prioridades: velocidad móvil → ficha producto → carrito/checkout → retención."
+  - "Mide el embudo (vista producto → add-to-cart → checkout iniciado → compra) y enfócate en 3 páginas con tráfico."
+  - "Reduce fricción: envío/devoluciones claros, pruebas (reviews), pagos rápidos (Shop Pay), formularios cortos."
+  - "Testea una hipótesis a la vez durante 2–4 semanas con un KPI (CR, AOV, RPV)."
+  - "El CRO sostenible se basa en confianza (soporte, devoluciones, plazos reales), no en dark patterns."
+cta:
+  title: "Acelera tu tienda Shopify (sin sacrificar UX)"
+  body: "Empieza en Shopify y aplica este playbook CRO para convertir el tráfico en ventas y reforzar la retención."
+  buttonLabel: "Probar Shopify gratis"
+  buttonHref: "https://shopify.pxf.io/6yLX0r"
+internalLinks:
+  - href: "/es/blog-seo-shopify-2026"
+    anchor: "SEO Shopify 2026: la checklist completa"
+  - href: "/es/blog-shopify"
+    anchor: "Shopify review 2025: funciones, precios, alternativas"
+  - href: "/es/blog"
+    anchor: "Ver todos los artículos de EasyShopBuilder"
+  - href: "/es/"
+    anchor: "Volver a inicio"
+faq:
+  - q: "¿Cuál es una buena tasa de conversión en Shopify?"
+    a: "Depende de tu sector, AOV, calidad del tráfico y oferta. No persigas un número universal: busca mejora continua arreglando velocidad, claridad de la ficha y fricción del checkout."
+  - q: "¿Shop Pay mejora la conversión?"
+    a: "Normalmente sí: los pagos express reducen fricción. El impacto depende del peso del móvil y de la transparencia en costes (envío/devoluciones) antes de pagar."
+  - q: "¿Debo instalar muchas apps CRO?"
+    a: "No: demasiadas apps ralentizan la tienda y complican la medición. Empieza por fundamentos UX y añade apps solo si el ROI está probado."
+  - q: "¿Cuánto tarda en verse el efecto de un cambio CRO?"
+    a: "A menudo 2–4 semanas, según el volumen de sesiones. Con poco tráfico, prioriza mejoras evidentes (envío/devoluciones, pruebas, rendimiento, usabilidad)."
+---
+
+<section className="section page-hero">
+  <div className="stack">
+    <p className="muted">CRO — MARZO 2026</p>
+    <h1>Optimizar la conversión en Shopify en 2026: guía completa</h1>
+    <p className="lead">
+      Una tienda Shopify que posiciona pero no convierte está perdiendo ingresos. En <strong>marzo de 2026</strong>, los palancas más fiables siguen siendo simples:
+      <strong> velocidad móvil</strong>, <strong>fichas producto orientadas a prueba</strong>, <strong>checkout sin fricción</strong> y <strong>retención</strong>. Esta guía te da un método priorizado y checklists prácticas.
+    </p>
+    <p className="muted">
+      <time dateTime="2026-03-05">5 de marzo de 2026</time> · ~18–24 min de lectura · de quick wins a estrategia LTV
+    </p>
+    <div className="cta-row">
+      <a className="btn cta" href="https://shopify.pxf.io/6yLX0r" rel="sponsored noopener noreferrer" target="_blank">
+        Probar Shopify gratis
+      </a>
+      <a className="btn ghost" href="#resumen">
+        Ver el framework
+      </a>
+      <a className="btn ghost" href="/es/blog">
+        Volver al blog
+      </a>
+    </div>
+    <p className="note">
+      Para mejorar tráfico y posicionamiento primero (indexación, enlazado, performance), lee{' '}
+      <a href="/es/blog-seo-shopify-2026">SEO Shopify 2026</a>.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="resumen">
+  <div className="stack">
+    <h2 id="resumen">Resumen: framework CRO en 4 capas</h2>
+    <p>
+      Para no testear al azar, usa un framework. En Shopify recomendamos un modelo en 4 capas:
+    </p>
+    <ol className="list">
+      <li>
+        <strong>Rendimiento y UX móvil:</strong> la base. Si la tienda es lenta, cualquier mejora se amortigua.
+      </li>
+      <li>
+        <strong>Ficha producto y colección:</strong> clarificar oferta, resolver objeciones, guiar la elección.
+      </li>
+      <li>
+        <strong>Carrito y checkout:</strong> eliminar fricción (pagos, envío, confianza) y evitar sorpresas.
+      </li>
+      <li>
+        <strong>Retención:</strong> post-compra, email/SMS, servicio, fidelización—ahí se construye la LTV.
+      </li>
+    </ol>
+
+    <h3>Los 6 quick wins más comunes</h3>
+    <ul className="list">
+      <li>
+        Mostrar <strong>envío y devoluciones</strong> en la ficha producto (no solo en checkout).
+      </li>
+      <li>
+        Añadir <strong>pruebas</strong>: reviews, UGC, garantía, badges de pago, señales de seguridad.
+      </li>
+      <li>
+        Simplificar el top de la ficha: <strong>título → precio → variante → CTA</strong>.
+      </li>
+      <li>
+        Reducir scripts/apps y acelerar el render móvil (LCP/CLS).
+      </li>
+      <li>
+        Poner visible un <strong>pago express</strong> (Shop Pay/Apple Pay/Google Pay según mercado).
+      </li>
+      <li>
+        Crear un <strong>bundle</strong> (AOV) en vez de cross-sell agresivo.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="medir">
+  <div className="stack">
+    <h2 id="medir">1) Medir el embudo: sin datos no hay CRO</h2>
+    <p>
+      El CRO es una disciplina de decisión. Tu objetivo es detectar dónde «fuga» el embudo y corregir la causa más probable. En Shopify, el embudo más útil es:
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Vista producto</strong> → <strong>Add-to-cart</strong> → <strong>Checkout iniciado</strong> → <strong>Compra</strong>
+      </li>
+    </ul>
+
+    <h3>A. KPI (y qué indican)</h3>
+    <ul className="list">
+      <li>
+        <strong>Add-to-cart rate:</strong> oferta/precio, falta de claridad, objeciones sin resolver o poca confianza.
+      </li>
+      <li>
+        <strong>Checkout start:</strong> fricción en carrito (costes sorpresa) o CTA poco visible.
+      </li>
+      <li>
+        <strong>Checkout completion:</strong> fricción de pago/envío, formularios, confianza o bugs.
+      </li>
+      <li>
+        <strong>RPV (revenue per visitor):</strong> KPI síntesis para comparar versiones.
+      </li>
+    </ul>
+
+    <h3>B. Método «3 páginas»</h3>
+    <p>
+      Si tienes poco tiempo: elige <strong>3 páginas</strong> con tráfico y potencial (normalmente 2 colecciones + 1 producto estrella). No disperses esfuerzos.
+    </p>
+    <p className="note">
+      Impresiones altas y clics bajos suelen ser un problema de <strong>SEO</strong> (snippet/CTR). Clics altos y compras bajas suelen ser un problema de <strong>CRO</strong>. Resuelve ambos.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="velocidad">
+  <div className="stack">
+    <h2 id="velocidad">2) Velocidad y UX móvil: el suelo (antes de «trucos»)</h2>
+    <p>
+      En 2026, gran parte del tráfico e-commerce es móvil. La tienda debe cargar rápido y ser estable: botones que se mueven (CLS), carousels pesados, popups intrusivos… todo cuesta ventas.
+    </p>
+
+    <h3>A. Checklist rendimiento orientada a conversión</h3>
+    <ul className="list">
+      <li>
+        <strong>Reducir apps:</strong> una solución por necesidad (reviews, upsell, email, tracking). Elimina el resto.
+      </li>
+      <li>
+        <strong>Imágenes:</strong> formatos modernos, tamaños responsive, lazy-load bajo el fold.
+      </li>
+      <li>
+        <strong>CTA rápido:</strong> «Añadir al carrito» visible sin scroll en móvil o sticky CTA.
+      </li>
+      <li>
+        <strong>Popups:</strong> retrasar y limitar a 1.
+      </li>
+    </ul>
+
+    <p>
+      Para un enfoque más técnico (canonicals, duplicación, enlazado), lee{' '}
+      <a href="/es/blog-seo-shopify-2026">SEO Shopify 2026</a>.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="ficha-producto">
+  <div className="stack">
+    <h2 id="ficha-producto">3) Ficha producto: resolver objeciones en el orden correcto</h2>
+    <p>
+      Una ficha producto convierte cuando responde: <em>«¿Es para mí, ahora?»</em> Reduce incertidumbre (calidad, talla, envío, devoluciones) y demuestra valor (reviews, uso, detalles).
+    </p>
+
+    <h3>A. Bloque decisión (above the fold)</h3>
+    <ul className="list">
+      <li>
+        <strong>Título</strong> + <strong>precio</strong> + <strong>variantes</strong> + <strong>CTA</strong> (sin distracciones).
+      </li>
+      <li>
+        <strong>3 beneficios</strong> máximo, orientados a uso.
+      </li>
+      <li>
+        <strong>Envío/devoluciones</strong> en 1 línea.
+      </li>
+      <li>
+        <strong>Pagos express</strong> visibles (si están activos).
+      </li>
+    </ul>
+
+    <h3>B. Bloque prueba (justo después)</h3>
+    <ul className="list">
+      <li>
+        <strong>Reviews:</strong> nota + volumen + 3 reviews destacadas (con fotos si es posible).
+      </li>
+      <li>
+        <strong>UGC:</strong> 4–8 fotos reales en uso.
+      </li>
+      <li>
+        <strong>FAQ producto:</strong> talla, compatibilidad, cuidado, garantía, devoluciones.
+      </li>
+    </ul>
+
+    <h3>C. Bloque detalles</h3>
+    <ul className="list">
+      <li>
+        <strong>Specs</strong> (materiales, dimensiones, compatibilidad, qué incluye).
+      </li>
+      <li>
+        <strong>Comparación</strong> (opcional): estándar vs premium, tamaños, modelos.
+      </li>
+      <li>
+        <strong>Garantía y soporte</strong>: proceso claro, tiempos, contacto.
+      </li>
+    </ul>
+
+    <p className="note">
+      Si no puedes explicar tu propuesta de valor en 1 frase + 3 beneficios, la ficha no lo compensará. Trabaja la oferta primero.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="colecciones">
+  <div className="stack">
+    <h2 id="colecciones">4) Colecciones: merchandising, filtros y elección guiada</h2>
+    <p>
+      Una colección debe ayudar a elegir, no solo listar productos.
+    </p>
+
+    <h3>A. Elementos a añadir</h3>
+    <ul className="list">
+      <li>
+        <strong>Intro corta</strong> (100–200 palabras): para quién es, uso y criterios.
+      </li>
+      <li>
+        <strong>2–3 filtros</strong> máximo al inicio.
+      </li>
+      <li>
+        <strong>Badges</strong> solo si son reales.
+      </li>
+      <li>
+        <strong>Ordenación</strong> por best-sellers por defecto.
+      </li>
+    </ul>
+
+    <h3>B. Errores comunes</h3>
+    <ul className="list">
+      <li>
+        Grid confusa (imágenes inconsistentes, precios poco claros).
+      </li>
+      <li>
+        Promesas ocultas (envío gratis solo visible al final).
+      </li>
+      <li>
+        Demasiadas opciones (fatiga de decisión).
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="carrito">
+  <div className="stack">
+    <h2 id="carrito">5) Carrito: el último filtro antes de pagar</h2>
+    <p>
+      El carrito es donde el cliente valida coherencia: total, plazos, devoluciones y pago. Si falta información, duda; si hay sorpresa, abandona.
+    </p>
+
+    <h3>A. Lo que debe responder en 10 segundos</h3>
+    <ul className="list">
+      <li>
+        <strong>Total claro:</strong> subtotal, envío estimado (o regla), impuestos si aplica.
+      </li>
+      <li>
+        <strong>Plazo creíble:</strong> ventana («2–4 días»), o «sale en 24–48h».
+      </li>
+      <li>
+        <strong>Riesgo bajo:</strong> devoluciones, garantía, soporte.
+      </li>
+      <li>
+        <strong>Pago fácil:</strong> mostrar opciones express sin forzar.
+      </li>
+    </ul>
+
+    <h3>B. Elementos que suelen ayudar</h3>
+    <ul className="list">
+      <li>
+        Recordatorio envío/devoluciones (1–2 líneas + enlace).
+      </li>
+      <li>
+        Umbral de envío gratis (si margen lo permite).
+      </li>
+      <li>
+        Upsell mínimo y muy relevante (si no, nada).
+      </li>
+      <li>
+        UI estable (sin mover el CTA).
+      </li>
+    </ul>
+
+    <h3>C. Errores frecuentes</h3>
+    <ul className="list">
+      <li>
+        Campo cupón demasiado visible (invita a buscar códigos).
+      </li>
+      <li>
+        Demasiado cross-sell (sobrecarga + scripts).
+      </li>
+      <li>
+        Costes ocultos («calculado en el siguiente paso»).
+      </li>
+    </ul>
+
+    <p className="note">
+      Abandono alto en carrito se suele arreglar con transparencia (costes/plazos) y confianza (devoluciones/soporte), no con colores.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="checkout">
+  <div className="stack">
+    <h2 id="checkout">6) Checkout: reducir fricción (y sorpresas)</h2>
+    <p>
+      La mayoría de abandonos vienen de: costes inesperados, fricción de pago y falta de confianza. El checkout debe ser predecible.
+    </p>
+
+    <h3>A. 7 palancas fiables</h3>
+    <ul className="list">
+      <li>
+        Mostrar costes pronto (envío/impuestos) desde carrito cuando sea posible.
+      </li>
+      <li>
+        Activar Shop Pay / pago express si encaja con tu mercado.
+      </li>
+      <li>
+        Reasegurar: badges de pago, devoluciones, contacto visible.
+      </li>
+      <li>
+        Formularios cortos con autocompletado.
+      </li>
+      <li>
+        2–3 opciones de envío claras.
+      </li>
+      <li>
+        Códigos promo: mejor no destacarlos demasiado.
+      </li>
+      <li>
+        Upsell post-compra suave y relevante (después del pago).
+      </li>
+    </ul>
+
+    <h3>B. Microcopy y reducción de ansiedad (lo que realmente bloquea el pago)</h3>
+    <p>
+      En el checkout, la gente no «lee»: escanea en busca de señales de riesgo. Un pequeño texto en el lugar correcto puede desbloquear más compras que un rediseño completo.
+      La clave es reducir ansiedad en tres temas: <strong>dinero</strong>, <strong>tiempo</strong> y <strong>seguridad</strong>.
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Dinero:</strong> recuerda el total y evita sorpresas (“Envío calculado al final” suele matar la conversión si no hay una regla clara).
+      </li>
+      <li>
+        <strong>Tiempo:</strong> confirma un plazo realista (“sale en 24–48h”, “entrega estimada 2–4 días”) y actualiza si cambia.
+      </li>
+      <li>
+        <strong>Seguridad:</strong> muestra métodos de pago y señales de confianza (SSL, políticas, soporte) sin saturar.
+      </li>
+      <li>
+        <strong>Fricción:</strong> valida errores de forma clara (campo resaltado + mensaje útil) y conserva datos al corregir.
+      </li>
+      <li>
+        <strong>Ayuda rápida:</strong> un enlace “¿preguntas?” con FAQ corta (envío/devoluciones) puede reducir abandonos de último minuto.
+      </li>
+    </ul>
+    <p className="note">
+      Si la mayoría de tu tráfico es móvil, revisa el checkout con el pulgar: ¿puedo completar el pago con una sola mano, sin zoom y sin perderme? Ese test simple revela muchos bloqueos.
+    </p>
+
+    <p className="note">
+      Evita hacks frágiles. Shopify evoluciona rápido: cambios no soportados se rompen y generan bugs de conversión.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="ofertas">
+  <div className="stack">
+    <h2 id="ofertas">7) Oferta y precio: la palanca más potente</h2>
+    <p>
+      El CRO no es solo UI. A menudo es oferta. Antes de añadir apps, prueba bundles, umbral de envío gratis, garantías y promesas de entrega.
+    </p>
+
+    <h3>A. 5 palancas de oferta que suelen subir el RPV</h3>
+    <ul className="list">
+      <li>
+        <strong>Bundle:</strong> sube AOV con coherencia.
+      </li>
+      <li>
+        <strong>Umbral envío gratis:</strong> calibrado a margen y cesta.
+      </li>
+      <li>
+        <strong>Garantía clara:</strong> reduce el riesgo percibido.
+      </li>
+      <li>
+        <strong>Escasez honesta:</strong> stock real, sin urgencia falsa.
+      </li>
+      <li>
+        <strong>Oferta entrada:</strong> producto «starter».
+      </li>
+    </ul>
+
+    <h3>B. Mensaje y transparencia de precios: baja la fricción mental</h3>
+    <p>
+      Muchas caídas de conversión no vienen de un botón, sino de la incertidumbre. Si el usuario tiene que hacer «cálculos» o adivinar (“¿cuánto cuesta el envío?” “¿puedo devolverlo?” “¿cuándo llega?”),
+      pospone la decisión. La transparencia es una palanca CRO porque reemplaza dudas por predictibilidad.
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Mostrar el coste real pronto:</strong> regla de envío o estimación en carrito (y en ficha si es posible). Evita el vago «se calcula en checkout».
+      </li>
+      <li>
+        <strong>Explicar el tradeoff:</strong> si cobras envío pero entregas más rápido, dilo. Si es gratis pero tarda más, dilo.
+      </li>
+      <li>
+        <strong>Convertir políticas en beneficios:</strong> “devolución 30 días” funciona cuando se ve y se entiende en 5 segundos.
+      </li>
+      <li>
+        <strong>Usar bundles para aportar valor:</strong> descuentos permanentes pueden entrenar al usuario a buscar cupones; los bundles suelen percibirse como valor.
+      </li>
+    </ul>
+    <p className="note">
+      Regla práctica: si soporte recibe siempre la misma pregunta (plazos, compatibilidad, devoluciones), la respuesta debe estar visible en la ficha y en el carrito. Menos tickets suele correlacionar con más conversión.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="confianza">
+  <div className="stack">
+    <h2 id="confianza">8) Confianza: la variable oculta</h2>
+    <p>
+      En 2026, la confianza es multiplicador. Claridad, transparencia, pruebas y servicio venden.
+    </p>
+
+    <h3>A. Checklist confianza</h3>
+    <ul className="list">
+      <li>
+        Envío/devoluciones visibles.
+      </li>
+      <li>
+        Contacto y tiempos de respuesta.
+      </li>
+      <li>
+        Páginas legales accesibles.
+      </li>
+      <li>
+        Pruebas reales (reviews/UGC).
+      </li>
+      <li>
+        Calidad (fotos coherentes, descripciones precisas).
+      </li>
+    </ul>
+
+    <h3>B. Soporte y devoluciones: el motor de confianza</h3>
+    <p>
+      La confianza no es un badge: es una experiencia. En e-commerce, el mejor atajo es hacer obvio «qué pasa si algo va mal» y que el proceso sea fácil. Cuando devoluciones están claras y el soporte es accesible,
+      el comprador se siente seguro para avanzar.
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Marcar expectativas:</strong> plazos realistas y updates proactivos (confirmación → envío → tracking).
+      </li>
+      <li>
+        <strong>Contacto fácil:</strong> un email y una FAQ con tiempo de respuesta prometido suele ser mejor que cinco canales sin claridad.
+      </li>
+      <li>
+        <strong>Reglas humanas:</strong> resumen corto (“30 días, sin usar, embalaje original”) + política completa.
+      </li>
+      <li>
+        <strong>Casos borde:</strong> regalos, cambios, daños—resuelve los miedos habituales con una mini-FAQ.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="testing">
+  <div className="stack">
+    <h2 id="testing">9) Tests e iteración: mejorar sin autoengaño</h2>
+    <p>
+      Test A/B es útil, pero muchas tiendas lo hacen demasiado pronto y sin volumen. Empieza por cambios evidentes y testea cuando haya sesiones suficientes.
+    </p>
+
+    <h3>A. Reglas de un test limpio</h3>
+    <ul className="list">
+      <li>
+        1 hipótesis → 1 cambio → 1 KPI.
+      </li>
+      <li>
+        Duración mínima 2 semanas (ideal 3–4).
+      </li>
+      <li>
+        Segmenta móvil vs desktop.
+      </li>
+      <li>
+        Vigila calidad: devoluciones, soporte y reviews.
+      </li>
+    </ul>
+
+    <h3>B. 10 ideas de test con valor</h3>
+    <ul className="list">
+      <li>
+        Sticky CTA móvil.
+      </li>
+      <li>
+        3 beneficios sobre el CTA vs texto largo.
+      </li>
+      <li>
+        Bloque envío/devoluciones above the fold.
+      </li>
+      <li>
+        UGC arriba vs solo estudio.
+      </li>
+      <li>
+        Bundle simple vs cross-sell múltiple.
+      </li>
+      <li>
+        Ordenar best-sellers en colección.
+      </li>
+      <li>
+        Posición de botones de pago express.
+      </li>
+      <li>
+        Ocultar campo cupón tras un enlace.
+      </li>
+      <li>
+        FAQ producto vs sin FAQ.
+      </li>
+      <li>
+        Copy del CTA según tipo de producto.
+      </li>
+    </ul>
+
+    <h3>C. Si tienes poco tráfico: cómo priorizar sin depender del A/B</h3>
+    <p>
+      Con poco volumen, un test A/B tarda demasiado o no es concluyente. Aun así, puedes mejorar la conversión si trabajas con cambios de alta confianza y con señales cualitativas.
+      La idea es simple: reducir fricción y dudas primero, y medir con indicadores adelantados.
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Usa señales cualitativas:</strong> preguntas de soporte, reseñas negativas, grabaciones de sesión y encuestas post-compra (“¿qué te frenó?”).
+      </li>
+      <li>
+        <strong>Ataca bloqueos:</strong> velocidad, costes sorpresa, plazos ambiguos, devoluciones ocultas, falta de prueba (reviews/UGC).
+      </li>
+      <li>
+        <strong>Itera en serie:</strong> un cambio, 2–4 semanas de observación, luego el siguiente (no cambies 10 cosas a la vez).
+      </li>
+      <li>
+        <strong>Mide micro-conversiones:</strong> add-to-cart y checkout iniciado suelen moverse antes que la compra en tiendas pequeñas.
+      </li>
+    </ul>
+    <p className="note">
+      Objetivo: menos azar y más método. Una hipótesis, un cambio, una medición. Así el CRO funciona incluso con tráfico limitado.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="retencion">
+  <div className="stack">
+    <h2 id="retencion">10) Retención: crecimiento rentable (LTV)</h2>
+    <p>
+      La conversión no termina en el pago. Experiencia de entrega, calidad y servicio construyen repetición. Sin retención, el crecimiento es frágil.
+    </p>
+
+    <h3>A. Mínimo post-compra</h3>
+    <ul className="list">
+      <li>
+        Emails de confirmación y tracking claros.
+      </li>
+      <li>
+        Página post-compra con soporte/FAQ y recomendaciones relevantes.
+      </li>
+      <li>
+        Solicitud de review en buen timing + UGC.
+      </li>
+    </ul>
+
+    <h3>B. Flows simples</h3>
+    <ul className="list">
+      <li>
+        Abandono carrito (con prueba + recordatorio envío/devoluciones).
+      </li>
+      <li>
+        Post-compra D+7 (guía de uso/mantenimiento).
+      </li>
+      <li>
+        Recompra D+30/D+60 según ciclo.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="plan-14-30-90">
+  <div className="stack">
+    <h2 id="plan-14-30-90">11) Plan de acción (14/30/90 días)</h2>
+    <p>Un plan CRO ejecutable para Shopify.</p>
+
+    <h3>14 días: quick wins</h3>
+    <ul className="list">
+      <li>
+        Mejorar velocidad (apps/scripts/imágenes).
+      </li>
+      <li>
+        Envío/devoluciones + prueba en productos con más tráfico.
+      </li>
+      <li>
+        Sticky CTA móvil en productos clave.
+      </li>
+    </ul>
+
+    <h3>30 días: merchandising y oferta</h3>
+    <ul className="list">
+      <li>
+        Rework de 2 colecciones (intro/orden/filtros/badges).
+      </li>
+      <li>
+        1 bundle + umbral envío gratis.
+      </li>
+      <li>
+        Tracking coherente del embudo + dashboard.
+      </li>
+    </ul>
+
+    <h3>90 días: iterar y sistematizar</h3>
+    <ul className="list">
+      <li>
+        3–5 tests (uno a la vez), prioriza móvil.
+      </li>
+      <li>
+        Contenido ayuda a elegir + enlazado (SEO → CRO).
+      </li>
+      <li>
+        Flows retención (abandono + post-compra + reviews).
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="faq-articulo">
+  <div className="stack">
+    <h2 id="faq-articulo">FAQ — Conversión Shopify (marzo 2026)</h2>
+
+    <h3>¿«Comprar ahora» o «Añadir al carrito»?</h3>
+    <p>
+      Depende. En compra simple, «Comprar ahora» reduce pasos. En productos con variantes/accesorios, «Añadir al carrito» facilita comparar.
+    </p>
+
+    <h3>¿Los popups aumentan la conversión?</h3>
+    <p>
+      Pueden aumentar leads, pero también dañar UX y velocidad. Úsalos con cuidado y mide impacto en ingresos, no solo en emails.
+    </p>
+
+    <h3>¿Qué hacer con poco tráfico?</h3>
+    <p>
+      Con poco volumen, tests A/B son poco fiables. Prioriza lo evidente: velocidad, claridad envío/devoluciones, pruebas y simplificación.
+    </p>
+
+    <h2 id="sources">Herramientas útiles</h2>
+    <ul className="list">
+      <li>
+        Shopify analytics + GA4 (embudo, RPV, AOV) y Search Console para conectar SEO y conversión.
+      </li>
+      <li>
+        PageSpeed Insights / Lighthouse (rendimiento y estabilidad).
+      </li>
+      <li>
+        Encuestas post-compra: «por qué compraste» / «qué casi te frenó».
+      </li>
+    </ul>
+
+    <h3>Checklist express de checkout (móvil) para subir conversión</h3>
+    <p>
+      Si hoy tuvieras que mejorar el checkout sin tocar “mil cosas”, empieza por esto. Son puntos que suelen reducir fricción y tickets de soporte.
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Coste total predecible:</strong> muestra envío (o regla) antes del pago. “Se calcula en el checkout” suele matar confianza.
+      </li>
+      <li>
+        <strong>Opciones de pago locales:</strong> al menos una opción rápida (Shop Pay / Apple Pay / Google Pay si aplica) + una opción “clásica” (tarjeta).
+      </li>
+      <li>
+        <strong>Errores claros y cerca del campo:</strong> no “algo salió mal”. Di qué falta y cómo solucionarlo (código postal, formato teléfono, dirección).
+      </li>
+      <li>
+        <strong>Autocompletar y teclado correcto:</strong> email con teclado de email, numérico en CP/teléfono, y autocompletar activado.
+      </li>
+      <li>
+        <strong>Confianza en 5 segundos:</strong> devoluciones, soporte y tiempos de entrega visibles (sin obligar a volver atrás).
+      </li>
+      <li>
+        <strong>Microcopy que reduce dudas:</strong> “Pago seguro”, “Envío 24–48h”, “Devolución 30 días” (solo si es verdad).
+      </li>
+    </ul>
+    <p className="note">
+      Consejo práctico: revisa 20 sesiones (grabaciones) en móvil y anota cada “pausa” antes de pagar. Muchas mejoras vienen de 3 frases y 2 detalles de UX, no de un rediseño completo.
+    </p>
+  </div>
+</section>

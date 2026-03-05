@@ -1,0 +1,703 @@
+---
+title: "Shopify conversion optimization in 2026: checkout, product pages & performance (complete guide)"
+description: "Shopify CRO guide (March 2026): measure the funnel, speed up the store, improve product/collection pages, reduce checkout friction (Shop Pay) and iterate with tests + analytics."
+lang: "en"
+translationKey: "conversion_shopify_2026"
+canonical: "/en/blog-optimiser-conversion-shopify-2026"
+type: "article"
+primaryKeyword: "Shopify conversion rate"
+date: "2026-03-05"
+updatedAt: "2026-03-05"
+jumpLinks:
+  - href: "#summary"
+    label: "Summary & framework"
+  - href: "#measure"
+    label: "Measure the funnel"
+  - href: "#speed"
+    label: "Speed & mobile UX"
+  - href: "#product-page"
+    label: "Product page (CRO)"
+  - href: "#collections"
+    label: "Collections (merchandising)"
+  - href: "#cart"
+    label: "Cart (reassure)"
+  - href: "#checkout"
+    label: "Checkout (friction)"
+  - href: "#offers"
+    label: "Offers & pricing"
+  - href: "#trust"
+    label: "Trust & proof"
+  - href: "#testing"
+    label: "Testing & iteration"
+  - href: "#retention"
+    label: "Retention (LTV)"
+  - href: "#plan-14-30-90"
+    label: "14/30/90-day plan"
+  - href: "#faq-article"
+    label: "FAQ"
+quickAnswer:
+  - "Optimize by priorities: mobile speed → product page → cart/checkout → retention."
+  - "Measure the funnel (product view → add to cart → checkout started → purchase) and focus on 3 high-traffic pages."
+  - "Reduce friction: clear shipping/returns, proof (reviews), fast payments (Shop Pay), short forms."
+  - "Test one hypothesis at a time over 2–4 weeks with one KPI (CR, AOV, RPV)."
+  - "Sustainable CRO is built on trust (support, returns, real delivery)—not dark patterns."
+cta:
+  title: "Want to speed up your Shopify store (without hurting UX)?"
+  body: "Start on Shopify, then apply this CRO guide to turn traffic into sales and strengthen retention."
+  buttonLabel: "Try Shopify for free"
+  buttonHref: "https://shopify.pxf.io/6yLX0r"
+internalLinks:
+  - href: "/en/blog-seo-shopify-2026"
+    anchor: "Shopify SEO in 2026: the complete checklist"
+  - href: "/en/blog-shopify"
+    anchor: "Shopify review 2025: features, pricing, alternatives"
+  - href: "/en/blog"
+    anchor: "Browse all EasyShopBuilder articles"
+  - href: "/en/"
+    anchor: "Back to home"
+faq:
+  - q: "What is a good Shopify conversion rate?"
+    a: "It depends on your niche, AOV, traffic quality and offer. Don’t chase a universal number—aim for steady improvement by fixing speed, product page clarity and checkout friction."
+  - q: "Does Shop Pay improve conversion?"
+    a: "Usually yes: express payments reduce friction. The lift depends on mobile traffic share and how transparent you are about shipping/returns before payment."
+  - q: "Should I install many CRO apps?"
+    a: "No: too many apps slow the store and muddy measurement. Start with UX fundamentals, then add apps only when their ROI is proven."
+  - q: "How long does a CRO change take to show impact?"
+    a: "Often 2–4 weeks, depending on session volume. On small traffic, prioritize obvious wins (shipping clarity, proof, performance, usability)."
+---
+
+<section className="section page-hero">
+  <div className="stack">
+    <p className="muted">CRO — MARCH 2026</p>
+    <h1>Shopify conversion optimization in 2026: the complete guide</h1>
+    <p className="lead">
+      A Shopify store that ranks but doesn’t convert is leaving money on the table. In <strong>March 2026</strong>, the most reliable levers are still simple:
+      <strong> mobile speed</strong>, <strong>proof-driven product pages</strong>, <strong>low-friction checkout</strong> and <strong>retention</strong>. This guide gives you a prioritised method plus practical checklists.
+    </p>
+    <p className="muted">
+      <time dateTime="2026-03-05">March 5, 2026</time> · ~18–24 min read · from quick wins to LTV strategy
+    </p>
+    <div className="cta-row">
+      <a className="btn cta" href="https://shopify.pxf.io/6yLX0r" rel="sponsored noopener noreferrer" target="_blank">
+        Try Shopify for free
+      </a>
+      <a className="btn ghost" href="#summary">
+        See the framework
+      </a>
+      <a className="btn ghost" href="/en/blog">
+        Back to blog
+      </a>
+    </div>
+    <p className="note">
+      To improve traffic quality and rankings first (indexation, internal linking, performance), read{' '}
+      <a href="/en/blog-seo-shopify-2026">Shopify SEO in 2026</a>.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="summary">
+  <div className="stack">
+    <h2 id="summary">Summary: the “4-layer” CRO framework</h2>
+    <p>
+      To avoid random testing, use a framework. On Shopify, we recommend a 4-layer model:
+    </p>
+    <ol className="list">
+      <li>
+        <strong>Performance &amp; mobile UX:</strong> the base. If the store is slow, every improvement is dampened.
+      </li>
+      <li>
+        <strong>Product &amp; collection pages:</strong> clarify the offer, remove objections, guide choice.
+      </li>
+      <li>
+        <strong>Cart &amp; checkout:</strong> remove friction (payments, shipping, trust) and reduce surprises.
+      </li>
+      <li>
+        <strong>Retention:</strong> post-purchase, email/SMS, service, loyalty—this is where LTV is built.
+      </li>
+    </ol>
+
+    <h3>The 6 most common quick wins</h3>
+    <ul className="list">
+      <li>
+        Show <strong>shipping + returns</strong> on product pages (not only at checkout).
+      </li>
+      <li>
+        Add <strong>proof</strong>: reviews, UGC, warranty, payment badges, security reassurance.
+      </li>
+      <li>
+        Simplify the top of the product page: <strong>title → price → variant → CTA</strong>.
+      </li>
+      <li>
+        Reduce scripts/apps and speed up mobile rendering (LCP/CLS).
+      </li>
+      <li>
+        Highlight <strong>express payments</strong> (Shop Pay, Apple Pay, Google Pay where relevant).
+      </li>
+      <li>
+        Create a <strong>bundle</strong> (AOV) instead of aggressive cross-sells.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="measure">
+  <div className="stack">
+    <h2 id="measure">1) Measure the funnel: no data, no CRO</h2>
+    <p>
+      CRO is a decision discipline. Your job is to find where the funnel leaks, then fix the most likely cause. On Shopify, the most useful funnel is:
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Product view</strong> → <strong>Add to cart</strong> → <strong>Checkout started</strong> → <strong>Purchase</strong>
+      </li>
+    </ul>
+
+    <h3>A. KPIs (and what they imply)</h3>
+    <ul className="list">
+      <li>
+        <strong>Add-to-cart rate:</strong> offer/price issue, unclear product value, weak trust, or poor variant UX.
+      </li>
+      <li>
+        <strong>Checkout start:</strong> cart friction (surprise fees) or CTA visibility issues.
+      </li>
+      <li>
+        <strong>Checkout completion:</strong> payment/shipping friction, form pain, trust gaps, bugs.
+      </li>
+      <li>
+        <strong>RPV (revenue per visitor):</strong> the best single KPI to compare two versions.
+      </li>
+    </ul>
+
+    <h3>B. The “3-page” method</h3>
+    <p>
+      If time is limited: pick <strong>three pages</strong> that combine traffic and potential (often 2 collections + 1 hero product). Don’t spread effort across 50 pages.
+    </p>
+    <p className="note">
+      A page with impressions but low clicks is often a <strong>SEO</strong> problem (snippet/CTR). A page with clicks but low purchases is a <strong>CRO</strong> problem. Fix both in sequence.
+    </p>
+
+    <h3>C. A quick diagnostic (to avoid guessing)</h3>
+    <p>
+      Before changing anything, answer these questions on your top pages. They usually point to the real bottleneck faster than “random ideas.”
+    </p>
+    <ul className="list">
+      <li>
+        Do users bounce before seeing the CTA (speed/layout shift issue)?
+      </li>
+      <li>
+        Do they scroll but not add to cart (offer/clarity/trust issue)?
+      </li>
+      <li>
+        Do they add to cart but abandon in cart (fee surprise, shipping uncertainty, promo code distraction)?
+      </li>
+      <li>
+        Do they start checkout but fail to complete (payment/shipping friction, form pain, trust gap, bug)?
+      </li>
+      <li>
+        Do they buy once but never return (product experience, delivery, support, retention flows)?
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="speed">
+  <div className="stack">
+    <h2 id="speed">2) Speed &amp; mobile UX: the foundation (before “tricks”)</h2>
+    <p>
+      In 2026, most ecommerce sessions are mobile. Your store must load fast <em>and</em> remain stable: shifting buttons (CLS), heavy carousels, intrusive popups—each costs sales.
+    </p>
+
+    <h3>A. Performance checklist for conversion</h3>
+    <ul className="list">
+      <li>
+        <strong>Reduce apps:</strong> one solution per need (reviews, upsell, email, tracking). Remove the rest.
+      </li>
+      <li>
+        <strong>Images:</strong> modern formats, responsive sizes, lazy-load below the fold.
+      </li>
+      <li>
+        <strong>Fast CTA:</strong> the “Add to cart” button should be visible without scrolling on mobile—or use a sticky CTA.
+      </li>
+      <li>
+        <strong>Popups:</strong> delay, limit to one, and avoid before interaction.
+      </li>
+    </ul>
+
+    <p>
+      For a more SEO-technical approach (canonicals, duplication, internal linking), read{' '}
+      <a href="/en/blog-seo-shopify-2026">Shopify SEO in 2026</a>.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="product-page">
+  <div className="stack">
+    <h2 id="product-page">3) Product page: remove objections in the right order</h2>
+    <p>
+      A product page converts when it answers one question: <em>“Is this for me, right now?”</em> Your job is to reduce uncertainty (quality, sizing, delivery, returns) and prove value (reviews, use, details).
+    </p>
+
+    <h3>A. The “decision block” (above the fold)</h3>
+    <ul className="list">
+      <li>
+        <strong>Title</strong> (clear) + <strong>price</strong> + <strong>variants</strong> + <strong>CTA</strong> (no distractions).
+      </li>
+      <li>
+        <strong>Max 3 benefits</strong>, written for use (“durable,” “lightweight,” “compatible”).
+      </li>
+      <li>
+        <strong>Shipping/returns</strong> in one line (typical delivery time + return window).
+      </li>
+      <li>
+        <strong>Express payments</strong> visible (if enabled) to reduce friction.
+      </li>
+    </ul>
+
+    <h3>B. The “proof block” (right after)</h3>
+    <ul className="list">
+      <li>
+        <strong>Reviews:</strong> rating + volume + 3 highlighted reviews (ideally with photos).
+      </li>
+      <li>
+        <strong>UGC:</strong> 4–8 real-life photos or use cases (not only studio images).
+      </li>
+      <li>
+        <strong>Product FAQ:</strong> sizing, compatibility, care, warranty, returns.
+      </li>
+    </ul>
+
+    <h3>C. The “details block” (for rational buyers)</h3>
+    <ul className="list">
+      <li>
+        <strong>Specs</strong> (materials, dimensions, weight, what’s included, compatibility).
+      </li>
+      <li>
+        <strong>Comparison</strong> (optional): standard vs premium, size differences, model differences.
+      </li>
+      <li>
+        <strong>Warranty &amp; support</strong>: clear process, response times, contact.
+      </li>
+    </ul>
+
+    <p className="note">
+      Rule of thumb: if you can’t express your value proposition in one sentence plus three benefits, the product page won’t compensate. Fix the offer first.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="collections">
+  <div className="stack">
+    <h2 id="collections">4) Collections: merchandising, filters and guided choice</h2>
+    <p>
+      A collection maps a need to an assortment. A converting collection is not just a grid—it helps users choose.
+    </p>
+
+    <h3>A. What to add (often missing)</h3>
+    <ul className="list">
+      <li>
+        <strong>Short intro</strong> (100–200 words): who it’s for, best use cases, how to choose.
+      </li>
+      <li>
+        <strong>2–3 filters</strong> at first (avoid complexity overload).
+      </li>
+      <li>
+        <strong>Badges</strong> (best-seller, new, fast shipping) only if true.
+      </li>
+      <li>
+        <strong>Sorting</strong>: best-sellers by default, not alphabetical.
+      </li>
+    </ul>
+
+    <h3>B. Collection mistakes that kill conversion</h3>
+    <ul className="list">
+      <li>
+        <strong>Unreadable grid</strong> (inconsistent images, unclear prices, messy hierarchy).
+      </li>
+      <li>
+        <strong>Hidden promises</strong> (free shipping only revealed at checkout).
+      </li>
+      <li>
+        <strong>Infinite facets</strong> (too many choices slows decisions).
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="cart">
+  <div className="stack">
+    <h2 id="cart">5) Cart: the final checkpoint before payment</h2>
+    <p>
+      Many stores talk about checkout and ignore the cart. But the cart is where buyers verify that everything is coherent:
+      <strong> price</strong>, <strong>quantity</strong>, <strong>delivery time</strong>, <strong>returns</strong> and <strong>payment</strong>. Missing info creates hesitation; surprises create abandonment.
+    </p>
+
+    <h3>A. What the cart must answer in under 10 seconds</h3>
+    <ul className="list">
+      <li>
+        <strong>Is the total clear?</strong> subtotal, shipping estimate (or rule), taxes where applicable.
+      </li>
+      <li>
+        <strong>Is delivery credible?</strong> date estimate or time window (“ships in 24–48h,” “delivered in 2–4 days”).
+      </li>
+      <li>
+        <strong>Is risk low?</strong> return policy, warranty, support contact.
+      </li>
+      <li>
+        <strong>Will payment be easy?</strong> show express payment options without forcing.
+      </li>
+    </ul>
+
+    <h3>B. Elements that often increase conversion (without dark patterns)</h3>
+    <ul className="list">
+      <li>
+        <strong>Shipping/returns reminder:</strong> 1–2 lines plus a link to details.
+      </li>
+      <li>
+        <strong>Free-shipping threshold:</strong> a discreet indicator (“only $X more”) only if margin allows.
+      </li>
+      <li>
+        <strong>Minimal upsell:</strong> one extremely relevant add-on; otherwise, nothing.
+      </li>
+      <li>
+        <strong>Stable cart UI:</strong> avoid heavy animations that move the CTA.
+      </li>
+      <li>
+        <strong>Cart drawer vs cart page:</strong> drawers are fast for adding; a dedicated cart page is better for decision-making.
+      </li>
+    </ul>
+
+    <h3>C. Common mistakes</h3>
+    <ul className="list">
+      <li>
+        <strong>Promo code field too prominent:</strong> it encourages leaving to “find a coupon.”
+      </li>
+      <li>
+        <strong>Too many cross-sells:</strong> cognitive overload and slower pages.
+      </li>
+      <li>
+        <strong>Hidden fees:</strong> revealed late or described vaguely (“calculated at next step”).
+      </li>
+      <li>
+        <strong>Secondary CTA is louder:</strong> “continue shopping” dominates “checkout.”
+      </li>
+    </ul>
+
+    <p className="note">
+      High cart abandonment is rarely solved by button colour. Start with transparency (costs + delivery) and trust (returns + support).
+    </p>
+  </div>
+</section>
+
+<section className="section" id="checkout">
+  <div className="stack">
+    <h2 id="checkout">6) Checkout: reduce friction (and surprises)</h2>
+    <p>
+      Most checkout abandonment comes from three causes: <strong>unexpected costs</strong>, <strong>payment friction</strong> and <strong>low trust</strong>. Checkout must be predictable—the customer should know what will happen before paying.
+    </p>
+
+    <h3>A. The 7 most reliable checkout levers</h3>
+    <ul className="list">
+      <li>
+        <strong>Show fees early:</strong> shipping and taxes estimated from cart if possible.
+      </li>
+      <li>
+        <strong>Shop Pay / express pay:</strong> enable where it fits your market.
+      </li>
+      <li>
+        <strong>Trust:</strong> payment badges, returns policy, contact visible.
+      </li>
+      <li>
+        <strong>Short forms:</strong> limit fields, use autocomplete, clear error states.
+      </li>
+      <li>
+        <strong>Shipping options:</strong> 2–3 clear options, not 8.
+      </li>
+      <li>
+        <strong>Promo codes:</strong> if overemphasised, they encourage leaving checkout to search coupons.
+      </li>
+      <li>
+        <strong>Post-purchase offers:</strong> soft, relevant upsells after payment—not before.
+      </li>
+    </ul>
+
+    <p className="note">
+      Avoid brittle hacks. Shopify’s checkout evolves quickly; fragile modifications break on updates and create conversion bugs. Prefer stable, supported approaches.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="offers">
+  <div className="stack">
+    <h2 id="offers">7) Offers &amp; pricing: the most powerful lever (if you own it)</h2>
+    <p>
+      CRO is not only UI. Often it’s the offer. Before stacking apps, test “business” levers: bundles, free-shipping thresholds, warranties, delivery promises.
+    </p>
+
+    <h3>A. 5 offer levers that often increase RPV</h3>
+    <ul className="list">
+      <li>
+        <strong>Bundle:</strong> simpler than aggressive cross-sells; increases AOV.
+      </li>
+      <li>
+        <strong>Free-shipping threshold:</strong> calibrated to margin and typical baskets.
+      </li>
+      <li>
+        <strong>Clear warranty:</strong> reduces perceived risk.
+      </li>
+      <li>
+        <strong>Honest scarcity:</strong> real stock signals (no fake urgency).
+      </li>
+      <li>
+        <strong>Entry offer:</strong> a “starter” product to start the relationship.
+      </li>
+    </ul>
+
+    <h3>B. Messaging &amp; price transparency: reduce “mental friction”</h3>
+    <p>
+      Many conversion drops aren’t caused by a missing button—they’re caused by uncertainty. If users have to do mental math (“How much is shipping?” “Can I return it?” “When will it arrive?”),
+      they postpone the decision. Transparency is a CRO lever because it replaces uncertainty with predictability.
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Reveal the true cost early:</strong> show shipping rules or estimated fees in cart (and on product pages when possible). Avoid “calculated at checkout” ambiguity.
+      </li>
+      <li>
+        <strong>Make the tradeoff explicit:</strong> if you charge for shipping but ship faster, say it clearly. If you ship free but slower, say it clearly.
+      </li>
+      <li>
+        <strong>Turn policies into benefits:</strong> “30-day returns” is a benefit when it is visible and easy to understand.
+      </li>
+      <li>
+        <strong>Use bundles to discount without training coupon-hunting:</strong> bundles feel like value, while constant discounts can hurt perceived quality.
+      </li>
+    </ul>
+    <p className="note">
+      A practical rule: if a user asks the same question in support (delivery time, compatibility, returns), surface the answer on the product page and cart.
+      Reducing support tickets often correlates with higher conversion.
+    </p>
+  </div>
+</section>
+
+<section className="section" id="trust">
+  <div className="stack">
+    <h2 id="trust">8) Trust: the hidden variable behind conversion</h2>
+    <p>
+      Buyers in 2026 are exposed to opportunistic stores and scams. Trust is therefore the #1 conversion multiplier. Your store should feel serious: clarity, transparency, proof and service.
+    </p>
+
+    <h3>A. Trust checklist</h3>
+    <ul className="list">
+      <li>
+        <strong>Shipping/returns</strong> visible on product pages and cart.
+      </li>
+      <li>
+        <strong>Contact</strong>: email, response time, support FAQ.
+      </li>
+      <li>
+        <strong>Legal pages</strong> accessible (footer).
+      </li>
+      <li>
+        <strong>Proof</strong>: reviews, UGC, press, partners—only if real.
+      </li>
+      <li>
+        <strong>Quality</strong>: consistent photography, precise descriptions, no vague promises.
+      </li>
+    </ul>
+
+    <h3>B. Support &amp; returns: the trust engine behind conversion</h3>
+    <p>
+      Trust is not a badge—it’s an experience. In ecommerce, the fastest way to build trust is to make “what happens if it goes wrong” obvious and painless.
+      When returns are clear and support is reachable, buyers feel safe to proceed.
+    </p>
+    <ul className="list">
+      <li>
+        <strong>Set expectations:</strong> show realistic delivery windows and proactive order updates (confirmation → shipping → tracking).
+      </li>
+      <li>
+        <strong>Make contact easy:</strong> one support email, one FAQ, and a promised response time beats five channels with no clarity.
+      </li>
+      <li>
+        <strong>Write “human” return rules:</strong> a short summary (“30 days, unused, original packaging”) plus the full policy.
+      </li>
+      <li>
+        <strong>Handle edge cases:</strong> gifts, exchanges, damaged items—address the common fears in a small FAQ.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="testing">
+  <div className="stack">
+    <h2 id="testing">9) Testing &amp; iteration: improve without fooling yourself</h2>
+    <p>
+      A/B testing is useful, but many stores test too early, too often, with too little volume. Start with obvious improvements, then test when you have enough sessions.
+    </p>
+
+    <h3>A. Rules of a clean test</h3>
+    <ul className="list">
+      <li>
+        <strong>1 hypothesis</strong> → 1 change → 1 KPI.
+      </li>
+      <li>
+        <strong>Duration:</strong> minimum 2 weeks (weekly cycle), ideally 3–4 weeks.
+      </li>
+      <li>
+        <strong>Segmentation:</strong> mobile vs desktop (results often diverge).
+      </li>
+      <li>
+        <strong>Quality:</strong> monitor returns, support tickets, reviews. A “toxic” conversion lift destroys LTV.
+      </li>
+    </ul>
+
+    <h3>B. 10 high-value test ideas (Shopify)</h3>
+    <ul className="list">
+      <li>
+        Sticky CTA on mobile (product page).
+      </li>
+      <li>
+        Three benefits above CTA vs longer copy.
+      </li>
+      <li>
+        Shipping/returns block above the fold.
+      </li>
+      <li>
+        UGC photos above the fold vs studio-only.
+      </li>
+      <li>
+        Simple bundle vs multiple cross-sells.
+      </li>
+      <li>
+        Best-seller sorting on collection vs default sorting.
+      </li>
+      <li>
+        Express payment emphasis (button placement).
+      </li>
+      <li>
+        Hide promo code behind link vs field visible.
+      </li>
+      <li>
+        Product FAQ (5 questions) vs no FAQ.
+      </li>
+      <li>
+        CTA copy (“Add to cart” vs “Buy now”) depending on product type.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="retention">
+  <div className="stack">
+    <h2 id="retention">10) Retention: profitable growth (LTV)</h2>
+    <p>
+      “Short-term CRO” ends at checkout. Durable growth happens after: delivery experience, product quality, service and follow-ups. A store that converts once but doesn’t retain is fragile.
+    </p>
+
+    <h3>A. Minimum viable post-purchase</h3>
+    <ul className="list">
+      <li>
+        Confirmation + tracking emails (clear and reassuring).
+      </li>
+      <li>
+        Post-purchase page with support, FAQ and relevant recommendations.
+      </li>
+      <li>
+        Review request at the right timing + UGC capture.
+      </li>
+    </ul>
+
+    <h3>B. Simple flows (but effective)</h3>
+    <ul className="list">
+      <li>
+        Cart abandonment (with proof + shipping/returns reminder).
+      </li>
+      <li>
+        Post-purchase D+7 (usage/care guide).
+      </li>
+      <li>
+        Rebuy D+30/D+60 (depending on product cycle).
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="plan-14-30-90">
+  <div className="stack">
+    <h2 id="plan-14-30-90">11) Action plan (14 days / 30 days / 90 days)</h2>
+    <p>
+      A CRO plan must be executable. Here is a realistic trajectory for a Shopify store without a dedicated team.
+    </p>
+
+    <h3>14 days: quick wins</h3>
+    <ul className="list">
+      <li>
+        Improve speed (remove unnecessary scripts/apps, optimise images).
+      </li>
+      <li>
+        Add shipping/returns block + proof (reviews, warranty) on top-traffic products.
+      </li>
+      <li>
+        Implement a sticky mobile CTA on key products.
+      </li>
+    </ul>
+
+    <h3>30 days: strengthen offer and merchandising</h3>
+    <ul className="list">
+      <li>
+        Rework 2 key collections (intro copy, sorting, filters, badges).
+      </li>
+      <li>
+        Build one bundle (AOV) + calibrate free-shipping threshold.
+      </li>
+      <li>
+        Implement consistent tracking (funnel events) and a simple dashboard.
+      </li>
+    </ul>
+
+    <h3>90 days: iterate and systemise</h3>
+    <ul className="list">
+      <li>
+        Run 3–5 tests (one at a time), prioritising mobile.
+      </li>
+      <li>
+        Publish “help-to-choose” content + internal linking (SEO → CRO).
+      </li>
+      <li>
+        Deploy retention flows (abandonment + post-purchase + reviews).
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section className="section" id="faq-article">
+  <div className="stack">
+    <h2 id="faq-article">FAQ — Shopify conversion (March 2026)</h2>
+
+    <h3>Should I use “Buy now” or “Add to cart”?</h3>
+    <p>
+      It depends. For a simple, repeatable purchase, “Buy now” can reduce a step. For products with variants/accessories, “Add to cart” helps users compose and compare.
+    </p>
+
+    <h3>Do popups increase conversion?</h3>
+    <p>
+      They can increase email capture, but also harm UX and speed. Use sparingly, at the right timing, and measure impact on revenue—not only leads.
+    </p>
+
+    <h3>What’s the best CRO lever if I have low traffic?</h3>
+    <p>
+      With low traffic, A/B tests are unreliable. Focus on obvious improvements: speed, shipping/returns clarity, proof and a simplified product page.
+    </p>
+
+    <h2 id="sources">Useful tools</h2>
+    <ul className="list">
+      <li>
+        Shopify analytics + GA4 (funnel, RPV, AOV) and Search Console to connect SEO and conversion.
+      </li>
+      <li>
+        PageSpeed Insights / Lighthouse for performance and stability (CLS).
+      </li>
+      <li>
+        Post-purchase surveys: “Why did you buy?” / “What almost stopped you?”
+      </li>
+    </ul>
+  </div>
+</section>
