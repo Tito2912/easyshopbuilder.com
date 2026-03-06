@@ -34,7 +34,7 @@ export const UI_TRANSLATIONS: Record<
 > = {
   fr: {
     blog: 'Blog',
-    tutorial: 'Guide Shopify 2025',
+    tutorial: 'Guide Shopify 2026',
     legal: 'Mentions légales',
     privacy: 'Politique de confidentialité',
     manageCookies: 'Gérer les cookies',
@@ -47,7 +47,7 @@ export const UI_TRANSLATIONS: Record<
   },
   en: {
     blog: 'Blog',
-    tutorial: 'Shopify guide 2025',
+    tutorial: 'Shopify guide 2026',
     legal: 'Legal notice',
     privacy: 'Privacy policy',
     manageCookies: 'Manage cookies',
@@ -60,7 +60,7 @@ export const UI_TRANSLATIONS: Record<
   },
   es: {
     blog: 'Blog',
-    tutorial: 'Guía Shopify 2025',
+    tutorial: 'Guía Shopify 2026',
     legal: 'Aviso legal',
     privacy: 'Política de privacidad',
     manageCookies: 'Gestionar cookies',
@@ -73,7 +73,7 @@ export const UI_TRANSLATIONS: Record<
   },
   de: {
     blog: 'Blog',
-    tutorial: 'Shopify Guide 2025',
+    tutorial: 'Shopify Guide 2026',
     legal: 'Impressum',
     privacy: 'Datenschutz',
     manageCookies: 'Cookies verwalten',
