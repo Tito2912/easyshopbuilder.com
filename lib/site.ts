@@ -125,10 +125,10 @@ const ROUTE_BY_KEY: Record<TranslationKey, Record<Lang, string>> = {
     de: '/de/blog',
   },
   tutorial_2025: {
-    fr: '/blog-shopify',
-    en: '/en/blog-shopify',
-    es: '/es/blog-shopify',
-    de: '/de/blog-shopify',
+    fr: '/blog-seo-shopify-2026',
+    en: '/en/blog-seo-shopify-2026',
+    es: '/es/blog-seo-shopify-2026',
+    de: '/de/blog-seo-shopify-2026',
   },
   legal_notice: {
     fr: '/mentions-legales',
