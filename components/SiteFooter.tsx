@@ -3,10 +3,14 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
+  aboutPath,
   blogIndexPath,
+  contactPath,
   getLangFromPathname,
   legalNoticePath,
+  methodologyPath,
   privacyPath,
+  sourcesPath,
   tutorialPath,
   SITE,
   UI_TRANSLATIONS,
@@ -43,6 +47,10 @@ export function SiteFooter() {
           <nav aria-label="Utility links" className="footer-nav">
             <Link href={tutorialPath(lang)}>{t.tutorial}</Link>
             <span aria-hidden="true" className="nav-sep" />
+            <Link href={aboutPath(lang)}>{t.about}</Link>
+            <Link href={methodologyPath(lang)}>{t.methodology}</Link>
+            <Link href={sourcesPath(lang)}>{t.sources}</Link>
+            <Link href={contactPath(lang)}>{t.contact}</Link>
             <Link href={legalNoticePath(lang)}>{t.legal}</Link>
             <Link href={privacyPath(lang)}>{t.privacy}</Link>
             <button

@@ -21,6 +21,10 @@ export const UI_TRANSLATIONS: Record<
   {
     blog: string;
     tutorial: string;
+    about: string;
+    methodology: string;
+    sources: string;
+    contact: string;
     legal: string;
     privacy: string;
     manageCookies: string;
@@ -35,6 +39,10 @@ export const UI_TRANSLATIONS: Record<
   fr: {
     blog: 'Blog',
     tutorial: 'Guide Shopify 2026',
+    about: 'À propos',
+    methodology: 'Méthodologie',
+    sources: 'Sources',
+    contact: 'Contact',
     legal: 'Mentions légales',
     privacy: 'Politique de confidentialité',
     manageCookies: 'Gérer les cookies',
@@ -48,6 +56,10 @@ export const UI_TRANSLATIONS: Record<
   en: {
     blog: 'Blog',
     tutorial: 'Shopify guide 2026',
+    about: 'About',
+    methodology: 'Methodology',
+    sources: 'Sources',
+    contact: 'Contact',
     legal: 'Legal notice',
     privacy: 'Privacy policy',
     manageCookies: 'Manage cookies',
@@ -61,6 +73,10 @@ export const UI_TRANSLATIONS: Record<
   es: {
     blog: 'Blog',
     tutorial: 'Guía Shopify 2026',
+    about: 'Acerca de',
+    methodology: 'Metodología',
+    sources: 'Fuentes',
+    contact: 'Contacto',
     legal: 'Aviso legal',
     privacy: 'Política de privacidad',
     manageCookies: 'Gestionar cookies',
@@ -74,6 +90,10 @@ export const UI_TRANSLATIONS: Record<
   de: {
     blog: 'Blog',
     tutorial: 'Shopify Guide 2026',
+    about: 'Über uns',
+    methodology: 'Methodik',
+    sources: 'Quellen',
+    contact: 'Kontakt',
     legal: 'Impressum',
     privacy: 'Datenschutz',
     manageCookies: 'Cookies verwalten',
@@ -109,7 +129,16 @@ export function prefixPath(lang: Lang): string {
   return lang === 'fr' ? '' : `/${lang}`;
 }
 
-type TranslationKey = 'home' | 'blog_index' | 'tutorial_2025' | 'legal_notice' | 'privacy_policy';
+type TranslationKey =
+  | 'home'
+  | 'blog_index'
+  | 'tutorial_2025'
+  | 'about'
+  | 'methodology'
+  | 'sources'
+  | 'contact'
+  | 'legal_notice'
+  | 'privacy_policy';
 
 const ROUTE_BY_KEY: Record<TranslationKey, Record<Lang, string>> = {
   home: {
@@ -130,6 +159,30 @@ const ROUTE_BY_KEY: Record<TranslationKey, Record<Lang, string>> = {
     es: '/es/blog-seo-shopify-2026',
     de: '/de/blog-seo-shopify-2026',
   },
+  about: {
+    fr: '/a-propos',
+    en: '/en/about',
+    es: '/es/about',
+    de: '/de/about',
+  },
+  methodology: {
+    fr: '/methodologie',
+    en: '/en/methodology',
+    es: '/es/methodology',
+    de: '/de/methodology',
+  },
+  sources: {
+    fr: '/sources',
+    en: '/en/sources',
+    es: '/es/sources',
+    de: '/de/sources',
+  },
+  contact: {
+    fr: '/contact',
+    en: '/en/contact',
+    es: '/es/contact',
+    de: '/de/contact',
+  },
   legal_notice: {
     fr: '/mentions-legales',
     en: '/en/legal-notice',
@@ -149,6 +202,10 @@ function translationKeyFromPath(pathname: string): TranslationKey | null {
   if (p === '/' || p === '') return 'home';
   if (p === '/blog') return 'blog_index';
   if (p === '/blog-shopify') return 'tutorial_2025';
+  if (p === '/a-propos' || p === '/about') return 'about';
+  if (p === '/methodologie' || p === '/methodology') return 'methodology';
+  if (p === '/sources') return 'sources';
+  if (p === '/contact') return 'contact';
   if (p === '/mentions-legales' || p === '/legal-notice') return 'legal_notice';
   if (p === '/politique-de-confidentialite' || p === '/privacy-policy') return 'privacy_policy';
   return null;
@@ -164,6 +221,22 @@ export function blogIndexPath(lang: Lang): string {
 
 export function tutorialPath(lang: Lang): string {
   return ROUTE_BY_KEY.tutorial_2025[lang];
+}
+
+export function aboutPath(lang: Lang): string {
+  return ROUTE_BY_KEY.about[lang];
+}
+
+export function methodologyPath(lang: Lang): string {
+  return ROUTE_BY_KEY.methodology[lang];
+}
+
+export function sourcesPath(lang: Lang): string {
+  return ROUTE_BY_KEY.sources[lang];
+}
+
+export function contactPath(lang: Lang): string {
+  return ROUTE_BY_KEY.contact[lang];
 }
 
 export function primaryAffiliateUrl(): string {
