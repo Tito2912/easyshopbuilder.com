@@ -1,0 +1,106 @@
+---
+title: "Shopify structured data (2026): Product, Breadcrumb, FAQ (guide + common errors)"
+description: "Shopify schema 2026: what to implement (Product, Breadcrumb, Organization, FAQ/Article), how to validate (Rich Results) and avoid errors."
+lang: "en"
+translationKey: "schema-shopify-2026"
+canonical: "/en/schema-shopify-2026"
+type: "article"
+primaryKeyword: "Shopify structured data"
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+jumpLinks:
+  - href: "#priorities"
+    label: "Priorities"
+  - href: "#product"
+    label: "Product schema"
+  - href: "#breadcrumb"
+    label: "Breadcrumb"
+  - href: "#faq"
+    label: "FAQ/Article"
+  - href: "#validation"
+    label: "Validation"
+quickAnswer:
+  - "Start with Product + Breadcrumb: they’re the most valuable for ecommerce."
+  - "Schema must match what users see (price, availability, reviews) or you’ll trigger errors."
+  - "Validate regularly with Rich Results and Search Console after theme/app changes."
+cta:
+  title: "Put Shopify on strong SEO rails"
+  body: "Fast theme + minimal app stack + clean schema = solid base for SEO and conversion."
+  buttonLabel: "Try Shopify for free"
+  buttonHref: "https://shopify.pxf.io/6yLX0r"
+faq:
+  - q: "Do I need a schema app?"
+    a: "Not always. Many themes already include Product/Breadcrumb. Apps can help, but watch out for duplicate markup."
+  - q: "Should I add FAQ everywhere?"
+    a: "Only where it answers real questions and is visible on-page. Keep it tight and contextual."
+  - q: "Why does Search Console show price errors?"
+    a: "Usually schema doesn’t match the UI (sale price, currency, variants) or there is duplicate markup."
+internalLinks:
+  - href: "/en/blog-seo-shopify-2026"
+    anchor: "Shopify SEO 2026: pillar guide"
+  - href: "/en/seo-produits-shopify-2026"
+    anchor: "Shopify product page SEO (2026)"
+  - href: "/en/seo-collections-shopify-2026"
+    anchor: "Shopify collection SEO (2026)"
+  - href: "/en/core-web-vitals-shopify-2026"
+    anchor: "Core Web Vitals on Shopify (2026)"
+  - href: "/en/shopify-markets-seo-2026"
+    anchor: "Shopify Markets & international SEO (2026)"
+---
+
+<p className="muted">Schema guide · Updated March 20, 2026 · ~7–10 min read</p>
+
+# Shopify structured data (2026)
+
+Structured data (schema.org) helps Google understand your pages and can unlock rich results. For ecommerce, keep it simple: **Product + Breadcrumb first**, then expand.
+
+<h2 id="priorities">1) Priorities (recommended order)</h2>
+
+1. **Product** (product pages): price, availability, reviews.
+2. **Breadcrumb**: reinforces hierarchy (home → collection → product).
+3. **Organization / WebSite**: trust baseline.
+4. **Article** (guides): editorial content type.
+5. **FAQPage**: only if the FAQ is visible and useful.
+
+Avoid “schema everywhere”: it creates errors and rarely improves SEO by itself.
+
+<h2 id="product">2) Product schema: what to watch</h2>
+
+Keep aligned with the UI:
+
+- price (including sale), currency,
+- availability,
+- variants (avoid inconsistencies),
+- ratings/reviews (only if displayed).
+
+If you use review apps, confirm they don’t add a second Product markup on top of the theme.
+
+<h2 id="breadcrumb">3) Breadcrumb: stable structure</h2>
+
+Breadcrumb should reflect a logical hierarchy, ideally:
+
+- Home → Collection → Product
+
+Stable hierarchy makes crawl and maintenance easier.
+
+<h2 id="faq">4) FAQ/Article: useful when contextual</h2>
+
+FAQ: add it where it resolves objections (shipping, returns, compatibility, care). Keep 3–6 questions and avoid generic copy/paste blocks.
+
+Article: helps clarify guide pages as editorial content.
+
+<h2 id="validation">5) Validation and common errors</h2>
+
+Routine:
+
+- test URLs in Rich Results,
+- monitor Search Console (Products, Breadcrumb),
+- re‑test after theme/app updates.
+
+Common issues:
+
+- duplicate markup (theme + app),
+- schema price not matching UI,
+- incorrect availability,
+- FAQ markup without visible FAQ.
+

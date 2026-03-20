@@ -1,0 +1,98 @@
+---
+title: "Core Web Vitals sur Shopify (2026) : LCP, INP, CLS (diagnostic + quick wins)"
+description: "Performance Shopify 2026 : comprendre LCP/INP/CLS, causes fréquentes (themes, apps, scripts), quick wins et checklist de suivi."
+lang: "fr"
+translationKey: "core-web-vitals-shopify-2026"
+canonical: "/core-web-vitals-shopify-2026"
+type: "article"
+primaryKeyword: "Core Web Vitals Shopify"
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+jumpLinks:
+  - href: "#metriques"
+    label: "Métriques"
+  - href: "#causes"
+    label: "Causes fréquentes"
+  - href: "#quickwins"
+    label: "Quick wins"
+  - href: "#mesure"
+    label: "Mesure"
+  - href: "#checklist"
+    label: "Checklist"
+quickAnswer:
+  - "Sur Shopify, la perf se joue surtout sur le thème, les images et la discipline apps/scripts."
+  - "Améliorer CWV aide la conversion et peut soutenir le SEO quand le contenu est comparable."
+  - "Priorisez : image hero (LCP) → scripts tiers (INP) → stabilité (CLS)."
+cta:
+  title: "Lancer une boutique Shopify rapide"
+  body: "Choisissez un thème léger, limitez les apps et optimisez l’image hero : c’est le trio qui change tout."
+  buttonLabel: "Essayer Shopify gratuitement"
+  buttonHref: "https://shopify.pxf.io/6yLX0r"
+faq:
+  - q: "Dois-je supprimer des apps pour gagner en vitesse ?"
+    a: "Souvent oui. Chaque app ajoute du JS. Gardez l’essentiel, remplacez les apps lourdes par des solutions plus légères."
+  - q: "Le thème suffit-il ?"
+    a: "Le thème est la base, mais les scripts (trackers, widgets) et les images font souvent la différence sur LCP/INP."
+  - q: "Faut-il viser 100/100 PageSpeed ?"
+    a: "Non. Visez des gains mesurables sur vos pages clés (home, collection, produit) et surveillez les données réelles (field data)."
+internalLinks:
+  - href: "/blog-seo-shopify-2026"
+    anchor: "SEO Shopify 2026 : guide pilier"
+  - href: "/seo-collections-shopify-2026"
+    anchor: "SEO collections Shopify (2026)"
+  - href: "/seo-produits-shopify-2026"
+    anchor: "SEO fiches produit Shopify (2026)"
+  - href: "/schema-shopify-2026"
+    anchor: "Schema Shopify (2026)"
+  - href: "/shopify-markets-seo-2026"
+    anchor: "Shopify Markets & SEO international (2026)"
+---
+
+<p className="muted">Guide performance · Mis à jour le 20 mars 2026 · ~7–10 min de lecture</p>
+
+# Core Web Vitals sur Shopify (2026)
+
+Sur Shopify, la performance est rarement un “bug”. C’est souvent un cumul : **images lourdes**, **apps**, **scripts tiers** et un thème qui en fait trop. La bonne nouvelle : les quick wins sont souvent simples.
+
+<h2 id="metriques">1) Les métriques (traduction business)</h2>
+
+- **LCP** : le contenu principal met trop de temps → “site lent”.
+- **INP** : interactions lentes (clics, formulaires) → friction.
+- **CLS** : page qui bouge → baisse confiance + clics ratés.
+
+Les CWV influencent surtout la conversion, et peuvent soutenir le SEO à contenu comparable.
+
+<h2 id="causes">2) Causes fréquentes sur Shopify</h2>
+
+- image hero trop lourde (home/collection),
+- polices non optimisées,
+- apps qui injectent du JS partout,
+- popups/widgets chargés trop tôt,
+- sections trop nombreuses dans le thème.
+
+<h2 id="quickwins">3) Quick wins (ordre recommandé)</h2>
+
+1. **Optimiser l’image hero** : bon format, taille, compression.
+2. **Limiter les apps** : garder l’essentiel, supprimer doublons.
+3. **Charger les scripts en différé** : trackers, chat, widgets.
+4. **Réduire les shifts** : réserver l’espace (images, bannières).
+5. **Nettoyer le thème** : sections inutiles, animations lourdes.
+
+<h2 id="mesure">4) Mesure : ne pas piloter à l’aveugle</h2>
+
+À suivre :
+
+- PageSpeed Insights (lab),
+- données réelles (field data) via Search Console / Chrome UX Report quand disponibles,
+- pages clés : home, 1 collection, 1 produit, checkout.
+
+Mesurez avant/après chaque changement important.
+
+<h2 id="checklist">5) Checklist (simple)</h2>
+
+- image hero optimisée (LCP)
+- apps minimales + pas de scripts injectés partout
+- scripts tiers retardés
+- pas de layout shifts (CLS)
+- monitoring mensuel + tests après changement de thème/apps
+

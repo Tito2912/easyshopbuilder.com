@@ -1,0 +1,106 @@
+---
+title: "Données structurées Shopify (2026) : Product, Breadcrumb, FAQ (guide + erreurs fréquentes)"
+description: "Schema Shopify 2026 : quoi implémenter (Product, Breadcrumb, Organization, FAQ/Article), comment valider (Rich Results) et éviter les erreurs."
+lang: "fr"
+translationKey: "schema-shopify-2026"
+canonical: "/schema-shopify-2026"
+type: "article"
+primaryKeyword: "schema Shopify"
+date: "2026-03-20"
+updatedAt: "2026-03-20"
+jumpLinks:
+  - href: "#priorites"
+    label: "Priorités"
+  - href: "#product"
+    label: "Schema Product"
+  - href: "#breadcrumb"
+    label: "Breadcrumb"
+  - href: "#faq"
+    label: "FAQ/Article"
+  - href: "#validation"
+    label: "Validation"
+quickAnswer:
+  - "Commencez par Product + Breadcrumb : ce sont les plus utiles pour e-commerce."
+  - "Le schema doit refléter ce que l’utilisateur voit (prix, disponibilité, avis) sinon vous générez des erreurs."
+  - "Validez régulièrement via les outils Rich Results et Search Console après chaque changement de thème/apps."
+cta:
+  title: "Mettre Shopify sur de bons rails SEO"
+  body: "Un thème rapide + une stack d’apps minimale + un schema propre = base solide pour SEO et conversion."
+  buttonLabel: "Essayer Shopify gratuitement"
+  buttonHref: "https://shopify.pxf.io/6yLX0r"
+faq:
+  - q: "Faut-il une app pour le schema ?"
+    a: "Pas toujours. Beaucoup de thèmes intègrent déjà Product/Breadcrumb. Une app peut aider, mais attention au double balisage."
+  - q: "Peut-on mettre une FAQ partout ?"
+    a: "Mieux vaut la réserver aux pages où elle répond à de vraies objections (collections, guides, pages produit) et où elle est visible."
+  - q: "Pourquoi Search Console signale des erreurs de prix ?"
+    a: "Souvent parce que le schema ne correspond pas à l’UI (prix promo, devise, variantes) ou à cause d’un double balisage."
+internalLinks:
+  - href: "/blog-seo-shopify-2026"
+    anchor: "SEO Shopify 2026 : guide pilier"
+  - href: "/seo-produits-shopify-2026"
+    anchor: "SEO fiches produit Shopify (2026)"
+  - href: "/seo-collections-shopify-2026"
+    anchor: "SEO collections Shopify (2026)"
+  - href: "/core-web-vitals-shopify-2026"
+    anchor: "Core Web Vitals sur Shopify (2026)"
+  - href: "/shopify-markets-seo-2026"
+    anchor: "Shopify Markets & SEO international (2026)"
+---
+
+<p className="muted">Guide schema · Mis à jour le 20 mars 2026 · ~7–10 min de lecture</p>
+
+# Données structurées Shopify (2026)
+
+Les données structurées (schema.org) aident Google à comprendre vos pages et peuvent activer certains enrichissements. Pour l’e-commerce, l’objectif est simple : **Product + Breadcrumb** d’abord, puis le reste.
+
+<h2 id="priorites">1) Priorités (ordre recommandé)</h2>
+
+1. **Product** (pages produit) : prix, disponibilité, avis.
+2. **Breadcrumb** : renforce la hiérarchie (home → collection → produit).
+3. **Organization / WebSite** : base de crédibilité.
+4. **Article** (guides) : pour les contenus éditoriaux.
+5. **FAQPage** : seulement si la FAQ est visible et utile.
+
+Évitez le “schema partout” : ça crée des erreurs et n’améliore pas forcément le SEO.
+
+<h2 id="product">2) Schema Product : ce qu’il faut surveiller</h2>
+
+À aligner avec l’UI :
+
+- prix (promo incluse), devise,
+- disponibilité (in/out of stock),
+- variantes (éviter des incohérences),
+- reviews/ratings (uniquement si affichés).
+
+Si vous utilisez des apps d’avis, vérifiez qu’elles n’ajoutent pas un second balisage Product.
+
+<h2 id="breadcrumb">3) Breadcrumb : structure et cohérence</h2>
+
+Le breadcrumb doit refléter une structure logique. Idéalement :
+
+- Home → Collection (catégorie) → Produit
+
+Plus la hiérarchie est stable, plus c’est simple à crawler et à maintenir.
+
+<h2 id="faq">4) FAQ/Article : utile quand c’est contextuel</h2>
+
+FAQ : placez-la sur les pages où elle répond aux questions fréquentes (livraison, retours, compatibilité, entretien). Gardez 3–6 questions maximum, et évitez les FAQ génériques copiées.
+
+Article : utile pour vos guides (SEO, conversion, comparatifs) afin de clarifier le type de contenu.
+
+<h2 id="validation">5) Validation et erreurs fréquentes</h2>
+
+Routine :
+
+- testez vos URLs via l’outil Rich Results,
+- surveillez Search Console (Produits, Breadcrumb),
+- re‑testez après changement de thème/apps.
+
+Erreurs fréquentes :
+
+- double balisage (theme + app),
+- prix/schema non cohérent avec la page,
+- disponibilité incorrecte,
+- balisage FAQ sur une FAQ invisible.
+
