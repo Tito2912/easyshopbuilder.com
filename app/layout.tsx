@@ -8,7 +8,7 @@ import { LangHtmlUpdater } from '@/components/LangHtmlUpdater';
 import { FaqEnhancer } from '@/components/FaqEnhancer';
 import { BlogSearchEnhancer } from '@/components/BlogSearchEnhancer';
 
-const IMPACT_SITE_VERIFICATION = 'be35d292-d9c2-41c8-9cae-3d4414df6085';
+const IMPACT_SITE_VERIFICATION = 'be35d292-d9c2-41c8-aaae-3d4414df6085';
 
 export const viewport: Viewport = {
   themeColor: '#008060',
