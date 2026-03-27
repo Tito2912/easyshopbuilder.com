@@ -8,6 +8,8 @@ import { LangHtmlUpdater } from '@/components/LangHtmlUpdater';
 import { FaqEnhancer } from '@/components/FaqEnhancer';
 import { BlogSearchEnhancer } from '@/components/BlogSearchEnhancer';
 
+const IMPACT_SITE_VERIFICATION = 'be35d292-d9c2-41c8-9cae-3d4414df6085';
+
 export const viewport: Viewport = {
   themeColor: '#008060',
 };
@@ -48,6 +50,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" suppressHydrationWarning>
+      <head>
+        <meta
+          name="impact-site-verification"
+          content={IMPACT_SITE_VERIFICATION}
+          {...({ value: IMPACT_SITE_VERIFICATION } as any)}
+        />
+      </head>
       <body>
         <LangHtmlUpdater />
         <FaqEnhancer />
