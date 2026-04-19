@@ -1,13 +1,17 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ArticleLayout } from '@/components/ArticleLayout';
-import { getAllDocMetas, getAllStaticParams, getDocMetaByRouteSegments, getPostByRouteSegments } from '@/lib/content';
+import { getAllDocMetas, getDocMetaByRouteSegments, getPostByRouteSegments } from '@/lib/content';
 import { buildArticleJsonLd, buildBreadcrumbJsonLd } from '@/lib/schema';
 import { buildAlternates, getOpenGraphImage, getOpenGraphType, parseRobots } from '@/lib/seo';
 
+const LANG_PREFIXES = new Set(['en', 'es', 'de']);
+
 export async function generateStaticParams() {
-  const all = await getAllStaticParams();
-  return all.filter((x) => x.slug.length > 0);
+  const all = await getAllDocMetas();
+  return all
+    .filter((m) => m.segments.length > 0 && !LANG_PREFIXES.has(m.segments[0] ?? ''))
+    .map((m) => ({ slug: m.segments }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
@@ -45,12 +49,14 @@ export default async function CatchAllPage({ params }: { params: Promise<{ slug:
   const post = await getPostByRouteSegments(slug);
   if (!post) return notFound();
 
-  const articleJsonLd = buildArticleJsonLd(post);
+  const articleJsonLd = post.type === 'article' ? buildArticleJsonLd(post) : null;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(post);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      {articleJsonLd ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      ) : null}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {post.faq?.length ? (
         <script

@@ -5,8 +5,16 @@ import { getAllDocMetas, getDocMetaByRouteSegments, getPostByRouteSegments } fro
 import { buildArticleJsonLd, buildBreadcrumbJsonLd } from '@/lib/schema';
 import { buildAlternates, getOpenGraphImage, getOpenGraphType, parseRobots } from '@/lib/seo';
 
-export async function generateMetadata(): Promise<Metadata> {
-  const meta = await getDocMetaByRouteSegments([]);
+export async function generateStaticParams() {
+  const all = await getAllDocMetas();
+  return all
+    .filter((m) => m.segments[0] === 'de' && m.segments.length > 1)
+    .map((m) => ({ slug: m.segments.slice(1) }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const meta = await getDocMetaByRouteSegments(['de', ...slug]);
   if (!meta) return {};
 
   const all = await getAllDocMetas();
@@ -34,16 +42,19 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function HomePage() {
-  const post = await getPostByRouteSegments([]);
+export default async function CatchAllPage({ params }: { params: Promise<{ slug: string[] }> }) {
+  const { slug } = await params;
+  const post = await getPostByRouteSegments(['de', ...slug]);
   if (!post) return notFound();
 
-  const articleJsonLd = buildArticleJsonLd(post);
+  const articleJsonLd = post.type === 'article' ? buildArticleJsonLd(post) : null;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(post);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      {articleJsonLd ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      ) : null}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {post.faq?.length ? (
         <script
@@ -66,3 +77,4 @@ export default async function HomePage() {
     </>
   );
 }
+

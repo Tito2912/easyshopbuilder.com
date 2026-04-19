@@ -2,16 +2,26 @@
 /index.html / 301!
 /index / 301!
 
-/en.html /en/ 301!
-/es.html /es/ 301!
-/de.html /de/ 301!
+/en.html /en 301!
+/es.html /es 301!
+/de.html /de 301!
 
-/en/index.html /en/ 301!
-/en/index /en/ 301!
-/es/index.html /es/ 301!
-/es/index /es/ 301!
-/de/index.html /de/ 301!
-/de/index /de/ 301!
+# Canonical trailing slashes (language roots)
+/en/ /en 301!
+/es/ /es 301!
+/de/ /de 301!
+
+# Canonical trailing slashes (language pages)
+/en/*/ /en/:splat 301!
+/es/*/ /es/:splat 301!
+/de/*/ /de/:splat 301!
+
+/en/index.html /en 301!
+/en/index /en 301!
+/es/index.html /es 301!
+/es/index /es 301!
+/de/index.html /de 301!
+/de/index /de 301!
 
 # Old .html / legacy -> canonical URLs (FR)
 /blog.html /blog 301!
@@ -39,11 +49,8 @@
 
 # Next export: serve pages for pretty URLs (avoid folder vs .html issues)
 /en /en.html 200
-/en/ /en.html 200
 /es /es.html 200
-/es/ /es.html 200
 /de /de.html 200
-/de/ /de.html 200
 
 /blog /blog.html 200
 /blog/ /blog.html 200
@@ -82,8 +89,5 @@
 /de/privacy-policy/ /de/privacy-policy.html 200
 
 /en/* /en/:splat.html 200
-/en/*/ /en/:splat.html 200
 /es/* /es/:splat.html 200
-/es/*/ /es/:splat.html 200
 /de/* /de/:splat.html 200
-/de/*/ /de/:splat.html 200

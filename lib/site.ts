@@ -143,9 +143,9 @@ type TranslationKey =
 const ROUTE_BY_KEY: Record<TranslationKey, Record<Lang, string>> = {
   home: {
     fr: '/',
-    en: '/en/',
-    es: '/es/',
-    de: '/de/',
+    en: '/en',
+    es: '/es',
+    de: '/de',
   },
   blog_index: {
     fr: '/blog',

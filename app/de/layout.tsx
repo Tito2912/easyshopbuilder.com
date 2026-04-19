@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from 'next';
-import './globals.css';
+import '../globals.css';
 import { SITE } from '@/lib/site';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { CookieBanner } from '@/components/CookieBanner';
-import { LangHtmlUpdater } from '@/components/LangHtmlUpdater';
 import { FaqEnhancer } from '@/components/FaqEnhancer';
 import { BlogSearchEnhancer } from '@/components/BlogSearchEnhancer';
+import { SiteJsonLd } from '@/components/SiteJsonLd';
 
 const IMPACT_SITE_VERIFICATION = 'be35d292-d9c2-41c8-aaae-3d4414df6085';
 
@@ -15,41 +15,39 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.baseUrl),
   title: {
     default: SITE.brandName,
-    template: `%s | ${SITE.brandName}`,
+    template: '%s',
   },
   description:
-    'Guide Shopify par EasyShopBuilder : thèmes rapides, Shop Pay, POS, apps, SEO et essai gratuit pour lancer une boutique performante.',
-  metadataBase: new URL(SITE.baseUrl),
-  alternates: { canonical: '/' },
+    'EasyShopBuilder Shopify-Guide: schnelle Themes, Shop Pay, POS-Setup, Apps, SEO und kostenloser Test, um einen performanten Store zu starten.',
   verification: {
     google: 'Utjj0xseLRA7JSDzkEOOFMeyaGAzuhU7lrCFw6Dxew8',
   },
   icons: {
-    icon: [{ url: '/images/favicon-shopify.png', type: 'image/png' }],
-    apple: [{ url: '/images/favicon-shopify-180.png', type: 'image/png' }],
+    icon: [{ url: '/favicon.ico' }, { url: '/favicon.png', type: 'image/png', sizes: '96x96' }],
+    apple: [{ url: '/apple-touch-icon.png', type: 'image/png', sizes: '180x180' }],
   },
   openGraph: {
     type: 'website',
     title: SITE.brandName,
-    description:
-      'Guide Shopify par EasyShopBuilder : POS, Shop Pay, apps, SEO et checklist de lancement.',
+    description: 'EasyShopBuilder Shopify-Guide: POS, Shop Pay, Apps, SEO und Launch-Checkliste.',
     url: SITE.baseUrl,
+    siteName: SITE.brandName,
     images: [{ url: '/images/capture-ecran-dashboard.jpg' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE.brandName,
-    description:
-      'Guide Shopify par EasyShopBuilder : POS, Shop Pay, apps, SEO et checklist de lancement.',
+    description: 'EasyShopBuilder Shopify-Guide: POS, Shop Pay, Apps, SEO und Launch-Checkliste.',
     images: ['/images/capture-ecran-dashboard.jpg'],
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="de" suppressHydrationWarning>
       <head>
         <meta
           name="impact-site-verification"
@@ -58,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <LangHtmlUpdater />
+        <SiteJsonLd lang="de" />
         <FaqEnhancer />
         <BlogSearchEnhancer />
         <SiteHeader />
@@ -69,3 +67,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+

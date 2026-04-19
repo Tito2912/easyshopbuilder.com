@@ -19,11 +19,16 @@ export function buildArticleJsonLd(post: Post) {
     '@type': 'Article',
     headline: post.title,
     description: post.description,
-    mainEntityOfPage: url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     datePublished: published,
     dateModified: modified,
     author: [{ '@type': 'Organization', name: SITE.brandName }],
-    publisher: { '@type': 'Organization', name: SITE.brandName },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.brandName,
+      url: BASE_URL,
+      logo: { '@type': 'ImageObject', url: new URL('/apple-touch-icon.png', BASE_URL).toString() },
+    },
   };
 }
 

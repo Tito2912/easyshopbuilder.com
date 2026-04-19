@@ -11,3 +11,5 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# GSC exports (local)
+*-Performance-on-Search-*/
