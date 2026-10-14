@@ -9,7 +9,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
 
   return [
-    ...metas.map((m) => ({
+    ...metas
+      .filter((m) => !(m.robots ?? '').toLowerCase().includes('noindex'))
+      .map((m) => ({
       url: new URL(m.canonical ?? m.routePath, SITE.baseUrl).toString(),
       lastModified: m.updatedAt ?? m.date ?? now,
     })),
